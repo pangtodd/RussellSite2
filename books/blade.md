@@ -1,5 +1,5 @@
 ---
-title: Blade: Vampire Nation
+title: Blade:Vampire Nation
 image: /assets/images/bladeCover.webp
 link: https://www.amazon.com/Blade-Vampire-Nation-Mark-Russell/dp/B0BMQSJTXM/ref=sr_1_1?qid=1680719009&refinements=p_27%3ADave+Wachter%3B+Mico+Suayan&s=books&sr=1-1&text=Dave+Wachter%3B+Mico+Suayan
 artist: Dave Wachter and Mico Suayan

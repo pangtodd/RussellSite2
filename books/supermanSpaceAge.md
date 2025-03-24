@@ -1,5 +1,5 @@
 ---
-title: Superman: Space Age
+title: "Superman: Space Age"
 image: /assets/images/Superman_Space_Age.webp
 link: https://www.amazon.com/Superman-Space-Age-Mark-Russell/dp/1779518471
 artist: Mike Allred

@@ -1,5 +1,5 @@
 ---
-title: The Incal: Psychoverse
+title: "The Incal: Psychoverse"
 image: /assets/images/incal.webp
 link: https://www.amazon.com/Incal-Psychoverse-Mark-Russell/dp/1643375040
 artist: Yanick Paquette
