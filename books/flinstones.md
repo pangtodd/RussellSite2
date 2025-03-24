@@ -1,0 +1,9 @@
+---
+title: Flintstones
+image: /assets/images/Flinstones6.webp
+link: https://www.amazon.com/Flintstones-Deluxe-Mark-Russell/dp/1779514972/
+artist: Stephen Pugh
+quote: GQ Magazine
+---
+
+one of the most relevant pieces of art to come out...is acomic book about the freaking Flintstones.
