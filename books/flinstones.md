@@ -6,4 +6,4 @@ artist: Stephen Pugh
 quote: GQ Magazine
 ---
 
-one of the most relevant pieces of art to come out...is acomic book about the freaking Flintstones.
+"one of the most relevant pieces of art to come out...is acomic book about the freaking Flintstones."

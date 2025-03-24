@@ -6,4 +6,4 @@ artist: Ben Caldwell
 quote: A.V. Club
 ---
 
-Prez has become a standout title with its sharp political commentary, bold sense of humor, and intricate world building in both the writing and art.
+"Prez has become a standout title with its sharp political commentary, bold sense of humor, and intricate world building in both the writing and art."

@@ -6,5 +6,5 @@ artist: Peter Krause
 quote: Comic Watch
 ---
 
-incisive, witty, and exactly what the I.P.-crazed comics
-industry needs to read the most right now.
+"incisive, witty, and exactly what the I.P.-crazed comics
+industry needs to read the most right now."

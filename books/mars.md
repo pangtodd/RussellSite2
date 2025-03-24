@@ -6,4 +6,4 @@ artist: Roberto Meli
 quote: ScreenRant
 ---
 
-Traveling to Mars from Mark Russell and Roberto Meli brings charm and humor to a story unafraid to explore mortality.
+"Traveling to Mars from Mark Russell and Roberto Meli brings charm and humor to a story unafraid to explore mortality."

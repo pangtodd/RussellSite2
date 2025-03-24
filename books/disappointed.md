@@ -5,4 +5,4 @@ link: https://www.amazon.com/God-Disappointed-You-Mark-Russell/dp/1603090983/
 artist: Shannon Wheeler
 quote: The New York Times
 ---
-Mr. Russell and Mr. Wheeler have used irreverence to win an audience for what is actually a slyly empathetic retelling of Bible stories." 
+"Mr. Russell and Mr. Wheeler have used irreverence to win an audience for what is actually a slyly empathetic retelling of Bible stories." 

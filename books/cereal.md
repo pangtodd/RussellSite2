@@ -6,5 +6,5 @@ artist: Peter Snejbjerg
 quote: comicon.com
 ---
 
-Cereal is a cleverly written, wonderfully realised collection of gothic giggles but with a truly literary heart that swells and falls in time with the readers’ emotions. 
+"Cereal is a cleverly written, wonderfully realised collection of gothic giggles but with a truly literary heart that swells and falls in time with the readers’ emotions."
               

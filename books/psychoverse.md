@@ -6,6 +6,6 @@ artist: Yanick Paquette
 quote: IGN.com
 ---
 
-a Mind-Bending Prequel to a Graphic Novel Masterpiece...A
+"a Mind-Bending Prequel to a Graphic Novel Masterpiece...A
 seminal sci-fi graphic novel gets a brand new prequel from
-a superstar creative team.
+a superstar creative team."
