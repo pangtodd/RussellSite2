@@ -1,4 +1,5 @@
----title: Bunkbed Mishaps
+---
+title: Bunkbed Mishaps
 image: /assets/images/bunkbed.webp
 link: https://www.amazon.com/Bunkbed-Mishaps-Cartoons-Mark-Russell/dp/B0C6425QT7
 artist: Mark Russell
