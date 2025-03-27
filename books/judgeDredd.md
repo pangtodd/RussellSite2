@@ -4,7 +4,7 @@ image: /assets/images/judgedredd01.webp
 link: https://www.amazon.com/JUDGE-DREDD-UNDER-SIEGE-TP/dp/1684053978
 artist: Max Dunbar
 quote: The Oregonian
-order: 3
+order: 6
 date: 2018-12-11
 permalink: false
 ---

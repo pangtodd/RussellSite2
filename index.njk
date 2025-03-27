@@ -142,7 +142,6 @@ layout: base.njk
     <h3 class="text-center">Comic books. And book books.</h3>
     <!-- Visible cards section -->
     {% set booksFirstDozen = collections.books.slice(0, 12) %}
-    {% set remainingBooks = collections.books.slice(12) %}
     {% if booksFirstDozen.length > 0 %}
       {% for book in booksFirstDozen %}
         {% if loop.index0 % 4 ==0 %}
@@ -185,6 +184,46 @@ layout: base.njk
     <!-- <div class="d-none" id="collapser"> -->
     <div class="collapse" style="transition: 2s" id="collapser">
       <!--put loop for remaining books here-->
+    {% set remainingBooks = collections.books.slice(12) %}
+    {% if remainingBooks.length > 0 %}
+    {% for book in remainingBooks %}
+        {% if loop.index0 % 4 ==0 %}
+          <div class="row">
+        {% endif %}
+      <div class="col-lg-3 mt-3">
+        <div class="card">
+          <div class="image">
+            <img
+              class="card-img-top"
+              src="{{ book.data.image }}"
+              alt="cover of {{ book.data.title }}"
+              style="width: 100%"
+            />
+          </div>
+          <div class="details">
+            <div class="center">
+              <h1>{{ book.data.title }}</h1>
+              <p>
+                {{ book.content | safe }}
+                {%if book.data.quote%}
+                  <br />-{{book.data.quote}} 
+                {% endif %}
+                <br />Art by {{book.data.artist}}
+              </p>
+              <a
+                href="{{book.data.link}}"
+                class="btn btn-success"
+                >buy now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if loop.index % 4 == 0 or loop.last%}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
     </div>
     <div>
       <br />
