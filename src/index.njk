@@ -1,0 +1,619 @@
+---
+title: Mark Russell, comic book author. Book book author.
+layout: base.njk
+--- 
+<!--carousel-->
+<div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselCaptions"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselCaptions"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselCaptions"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselCaptions"
+      data-bs-slide-to="3"
+      aria-label="Slide 4"
+    ></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <picture>
+        <source
+          media="(max-width: 596px)"
+          srcset="assets/images/SuperSpaceAgeMobile.webp"
+        />
+        <source
+          media="(min-width: 800px)"
+          srcset="assets/images/SuperSpaceAge.webp"
+        />
+        <img
+          src="assets/images/SuperSpaceAge.webp"
+          class="d-block w-100"
+          alt="Superman in the fortress of solitude"
+        />
+      </picture>
+      <div class="carousel-caption">
+        <h5>Superman Space Age</h5>
+        <p>art by Mike Allred</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <picture>
+        <source
+          media="(max-width: 596px)"
+          srcset="assets/images/Traveling_to_Mars-panel-mobile.webp"
+        />
+        <source
+          media="(min-width: 800px)"
+          srcset="assets/images/Traveling_to_Mars-panel.webp"
+        />
+        <img
+          src="assets/images/Traveling_to_Mars-panel.webp"
+          class="d-block w-100"
+          alt="astronaut viewing earth news"
+        />
+      </picture>
+      <div class="carousel-caption">
+        <h5>Traveling to Mars</h5>
+        <p>art by Roberto Meli</p>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <picture>
+        <source
+          media="(max-width: 596px)"
+          srcset="assets/images/Not-All-Robots-1-mobile.webp"
+        />
+        <source
+          media="(min-width: 800px)"
+          srcset="assets/images/Not-All-Robots-1.webp"
+        />
+        <img
+          src="assets/images/Not-All-Robots-1-mobile.webp"
+          class="d-block w-100"
+          alt="robot and woman serving dinner"
+        />
+      </picture>
+      <div class="carousel-caption">
+        <h5>Not All Robots</h5>
+        <p>art by Mike Deodato Jr.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <picture>
+        <source
+          media="(max-width: 596px)"
+          srcset="assets/images/oneStarSquadCropped.webp"
+        />
+        <source
+          media="(min-width: 800px)"
+          srcset="assets/images/oneStarSquad.webp"
+        />
+        <img
+          src="assets/images/oneStarSquadCropped.webp"
+          class="d-block w-100"
+          alt="One Star Squad trying to catch money raining from the sky"
+        />
+      </picture>
+      <div class="carousel-caption">
+        <h5>One Star Squadron</h5>
+        <p>art by Steve Lieber</p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<section id="books">
+  <div class="container mt-3">
+    <h1 class="text-center">Books</h1>
+    <h3 class="text-center">Comic books. And book books. {{collections.books.length}}</h3>
+    <!-- Visible cards section -->
+    {% set booksFirstDozen = collections.books.slice(0, 12) %}
+    {% if booksFirstDozen.length > 0 %}
+      {% for book in booksFirstDozen %}
+        {% if loop.index0 % 4 ==0 %}
+          <div class="row">
+        {% endif %}
+      <div class="col-lg-3 mt-3">
+        <div class="card">
+          <div class="image">
+            <img
+              class="card-img-top"
+              src="{{ book.data.image }}"
+              alt="cover of {{ book.data.title }}"
+              style="width: 100%"
+            />
+          </div>
+          <div class="details">
+            <div class="center">
+              <h1>{{ book.data.title }}</h1>
+              <p>
+                {{ book.content | safe }}
+                {%if book.data.quote%}
+                  <br />-{{book.data.quote}} 
+                {% endif %}
+                <br />Art by {{book.data.artist}}
+              </p>
+              <a
+                href="{{book.data.link}}"
+                class="btn btn-success"
+                >buy now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if loop.index % 4 == 0 or loop.last%}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+    <!-- <div class="d-none" id="collapser"> -->
+    <div class="collapse" style="transition: 2s" id="collapser">
+      <!--put loop for remaining books here-->
+    {% set remainingBooks = collections.books.slice(12) %}
+    {% if remainingBooks.length > 0 %}
+    {% for book in remainingBooks %}
+        {% if loop.index0 % 4 ==0 %}
+          <div class="row">
+        {% endif %}
+      <div class="col-lg-3 mt-3">
+        <div class="card">
+          <div class="image">
+            <img
+              class="card-img-top"
+              src="{{ book.data.image }}"
+              alt="cover of {{ book.data.title }}"
+              style="width: 100%"
+            />
+          </div>
+          <div class="details">
+            <div class="center">
+              <h1>{{ book.data.title }}</h1>
+              <p>
+                {{ book.content | safe }}
+                {%if book.data.quote%}
+                  <br />-{{book.data.quote}} 
+                {% endif %}
+                <br />Art by {{book.data.artist}}
+              </p>
+              <a
+                href="{{book.data.link}}"
+                class="btn btn-success"
+                >buy now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if loop.index % 4 == 0 or loop.last%}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+    </div>
+    <div>
+      <br />
+      <p class="text-center">
+        <button
+          id="moreBooks"
+          class="btn btn-success"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapser"
+          aria-expanded="false"
+          aria-controls="collapse"
+          aria-label="expand display of books"
+        >
+          <!-- filled in via css -->
+        </button>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="comingSoon">
+  <div class="container mt-4 pt-4">
+    <h1 class="text-center">Coming Soon</h1>
+    <div
+      class="embed-container"
+      style="
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        position: relative;
+        padding-bottom: 75%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      "
+    >
+      <iframe
+        style="position: absolute; width: 100%; height: 100%"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vQ1CX7vZhu3AD_s3eXOuzLck6jA5GtNQV5LTWmzHCCAMEtpmPWWVYkMUwR0EpEbsQKDELErSFq-c2qC/embed?start=false&loop=false&delayms=5000&rm=minimal"
+        frameborder="2px solid black"
+        ;
+        width="960"
+        height="749"
+        allowfullscreen="allowfullscreen"
+        webkitallowfullscreen="webkitallowfullscreen"
+        mozallowfullscreen="mozallowfullscreen"
+        aria-label="image to Mark Russell's newest project"
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="sales">
+  <div class="container mt-4 pt-4" style="text-align: center">
+    <h1>Coming Soon: items for sale</h1>
+    <img
+      src="assets/images/crap.webp"
+      class="rounded mx-auto d-block"
+      alt="Flinstones panel of guy talking about loving his 'crap'"
+    />
+    <h4>
+      <br />Check back soon for autographed books, one-of-kind collectables,
+      and items sure to surprise and delight!
+    </h4>
+  </div>
+</section>
+
+    <section id="about">
+      <div class="container mt-4 pt-4">
+        <h1 class="text-center">About</h1>
+        <div class="row mt-4">
+          <div class="col-lg-4">
+            <img
+              src="assets/images/Mark Russell Headshot 1.webp"
+              class="imageAboutPage"
+              alt="headshot of Mark Russell"
+            />
+          </div>
+          <div class="col-lg-8">
+            <p class="bio_text">
+              Mark Russell is an author, comic book writer, and cartoonist
+              living and toiling in Portland, Oregon. The works he is known for
+              include God Is Disappointed in You, a modern re-telling of the
+              Bible, The Flintstones, Exit Stage Left: The Snagglepuss
+              Chronicles (Winner of the 2019 GLAAD Award for Outstanding Comic),
+              Not All Robots (Winner of the 2022 Eisner Award for Best Humor
+              Comic), and Superman: Space Age, which tells the story of Superman
+              and his loved ones, living against the backdrop of Cold War
+              America. As far as he knows, all his books are still in print.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+     
+
+</section>
+
+<section id="press">
+  <div class="container mt-4 pt-4">
+    <h1 class="text-center">Press</h1>
+    <div class="row">
+      <!-- row 1 -->
+      <div class="col-lg-4">
+        <a
+          class="cardLink"
+          href="https://www.vox.com/culture/2017/3/22/15000062/flintstones-comic-interview-russell-pugh"
+        >
+          <div class="card mb-3 h-100" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4 row align-items-center">
+                <img
+                  src="assets/images/Vox_logo.svg"
+                  class="rounded mx-auto d-none d-md-block"
+                  alt="Vox Logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <br />
+                  <h5 class="card-title">
+                    The creators of The Flintstones comic on bringing
+                    existential dread to Bedrock.
+                  </h5>
+                  <p class="card-text"></p>
+                  <br />
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >VOX, Alex Abad-Santos, April 6, 2017</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <a
+          class="cardLink"
+          href="https://www.salon.com/2019/06/10/snagglepuss-lgbt-hero-legendary-hanna-barbera-character-reborn-in-new-comic-series/"
+        >
+          <div class="card mb-3 h-100" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4 row align-items-center">
+                <img
+                  src="assets/images/salon-logo.svg"
+                  class="rounded mx-auto d-none d-md-block"
+                  alt="Salon Logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <br />
+                  <h5 class="card-title">
+                    Snagglepuss, LGBT hero: Legendary Hanna-Barbera
+                    character reborn in new comic series
+                  </h5>
+                  <p class="card-text"></p>
+                  <br />
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Salon, Chauncey DeVega, June 10, 2019</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <a
+          class="cardLink"
+          href="https://www.cbr.com/superman-space-age-mark-russell-mike-allred-interview/"
+        >
+          <div class="card mb-3 h-100" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4 row align-items-center">
+                <img
+                  src="assets/images/cbr-logo-full-colored-light.svg"
+                  class="rounded mx-auto d-none d-md-block"
+                  alt="Vox Logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <br />
+                  <h5 class="card-title">
+                    Superman: Space Age - Mark Russell & Mike Allred Detail
+                    a Grounded, More Contemplative Man of Tomorrow
+                  </h5>
+                  <p class="card-text"></p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >CBR, Sam Stone, June 24, 2022
+                    </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- row 2 -->
+    <div class="row">
+      <div class="col-lg-4">
+        <a
+          class="cardLink"
+          href="https://screenrant.com/billionaire-island-cult-dogs-ahoy-comics-russell-pugh/"
+        >
+          <div class="card mb-3 h-100 mt-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4 row align-items-center">
+                <img
+                  src="assets/images/Screen_Rant_logo.webp"
+                  class="rounded mx-auto d-none d-md-block"
+                  alt="Vox Logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <br />
+                  <h5 class="card-title">
+                    Billionaire Island: Cult of Dogs Is the Essential Satire
+                    of 2022
+                  </h5>
+                  <p class="card-text"></p>
+                  <br />
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >ScreenRant, Justin Epps, Nov 21, 2022</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <a
+          class="cardLink"
+          href="https://www.syfy.com/syfy-wire/mark-russell-not-all-robots-creator-owned-comic-toxic-masculinity"
+        >
+          <div class="card mb-3 h-100 mt-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4 row align-items-center">
+                <img
+                  src="assets/images/SyFyLogo.webp"
+                  class="rounded mx-auto d-none d-md-block"
+                  alt="SyFy logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <br />
+                  <h5 class="card-title">
+                    Mark Russell's 'Not All Robots' Is a Parable of Toxic
+                    Masculinity & AI Supremecy in Our Capitalist Hellscape
+                  </h5>
+                  <!-- <p class="card-text"></p> -->
+                  <br />
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >SyFy, Mike Avila May 12, 2021</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4">
+        <a
+          class="cardLink"
+          href="https://www.npr.org/2018/08/02/634937720/yabbadabba-what-these-arent-the-flintstones-you-remember"
+        >
+          <div class="card mb-3 h-100 mt-3" style="max-width: 540px">
+            <div class="row g-0">
+              <div class="col-md-4 row align-items-center">
+                <img
+                  src="assets/images/npr-logo.svg"
+                  class="rounded mx-auto d-none d-md-block"
+                  alt="NPR logo"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <br />
+                  <h5 class="card-title" style="text-decoration: none">
+                    Yabbadabba-What? These Aren't The Flintstones You
+                    Remember (audio interview)
+                  </h5>
+                  <p class="card-text"></p>
+                  <br />
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >NPR/OPB, Mallory Yu, Aug 1, 2018
+                    </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container mt-3 contactContent">
+    <h1 class="text-center">Contact</h1>
+    <h3></h3>
+
+    <p>
+      <a class="nav-link" href="https://twitter.com/Manruss">
+       <svg 
+                fill="none" 
+                viewBox="0 0 64 57" 
+                width="32" 
+                style="width: 32px; height: 28.5px;"
+                alt="bluesky logo"
+                >
+              <path fill="#0085ff" d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z"></path></svg>
+        Find Mark on Bluesky.
+      </a>
+    </p>
+    <p>
+      <a class="nav-link" href="https://bsky.app/profile/manruss.bsky.social">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          fill="currentColor"
+          class="bi bi-instagram"
+          viewBox="0 0 16 16"
+          alt="Instagram link for Mark Russell"
+        >
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+          />
+        </svg>
+        Feeling more voyeristic? Try Instagram.
+      </a>
+    </p>
+    <p>
+      For media inquiries, apperance requests, script doctoring, etc, please
+      use the following form.
+    </p>
+    <form name="contact" method="POST" data-netlify="true">
+      <input
+        type="text"
+        label="name field"
+        class="form-control form-control-lg"
+        name="name"
+        placeholder="Name"
+      />
+      <input
+        type="email"
+        label="email field"
+        class="form-control mt-3"
+        name="email"
+        placeholder="Email"
+      />
+      <input
+        type="text"
+        label="subject field"
+        class="form-control mt-3"
+        name="subject"
+        placeholder="Subject"
+      />
+      <div class="mb-3 mt-3">
+        <textarea
+          class="form-control"
+          rows="5"
+          id="comment"
+          name="text"
+          label="message field"
+          placeholder="message"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-success mt-3">submit</button>
+    </form>
+  </div>
+</section>
