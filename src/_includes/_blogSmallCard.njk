@@ -1,0 +1,13 @@
+{% macro smallBlogCard(props) %}
+<div class="small-blog-card">
+    <a href="{{ props.cardLink }}" class="card-link" aria-label="Read more about {{ props.cardTitle }}">
+        <div class="blogCard card">
+            <img src="{{ props.cardImage | default('/assets/images/journal.webp') }}" class="card-img-top" alt="{{ props.cardImageAlt | default('card image') }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ props.cardTitle }}</h5>
+                <p class="card-text">{{ props.cardDescription }}</p>
+            </div>
+        </div>
+    </a>
+</div>
+{% endmacro %}
