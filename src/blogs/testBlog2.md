@@ -1,5 +1,5 @@
 ---
-title: "test Blog 2"
+title: test Blog 2
 date: 2025-03-24
 updated: 2025-03-24
 description: 'He was a punk and lived in the big city. It was in Vienna, in Vienna, where he did everything. He had debts because he drank, but women all loved him anyway And every one shouted: "Now come and rock me, Amadeus"'

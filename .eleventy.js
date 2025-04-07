@@ -3,7 +3,7 @@ module.exports = function (eleventyConfig){
 
     eleventyConfig.addCollection("blogs", function(collectionApi){
         return collectionApi.getFilteredByGlob("src/blogs/*.md").sort(function(a,b){
-            return new Date(b.data.date) - new Date(a.data.date);
+            return new Date(a.data.date) - new Date(b.data.date);
         });
     });
 
