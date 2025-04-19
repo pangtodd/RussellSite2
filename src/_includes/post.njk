@@ -3,19 +3,19 @@ layout: base.njk
 ---
 
 <div class="hero">
-    <img src="/assets/images/secondComingCropped.webp" class="d-block w-100" alt="Hero Image">
+    <img src="/assets/images/secondComingWide.webp" class="d-block w-100" alt="Hero Image">
 </div>
 <div class="container mt-3">
     <div class= "title">
         <h1 class="text-center">Posts.</h1>
-        <h3 class="text-center"> From the pen of Manruss {{collections.blogs.length}}</h3>
+        <h3 class="text-center"> From the pen of Manruss</h3>
     </div>
     <div class ="row">
         <div class= "col-12 col-md-9">
             <article>
                 <img src="{{image}}" class="card-img-top" alt="{{imageAlt}}">
                 <h1>{{ title }}</h1>
-                <p class="date">Published: {{ date }}</p>
+                <p class="date">Published: {{ date | basicDate }} </p>
                 {{ content | safe }}
             </article>
         </div>
@@ -23,47 +23,46 @@ layout: base.njk
             {% set posts = collections.blogs %}
             {% set prevPost = collections.blogs | getPreviousCollectionItem(page) %}
             {% set nextPost = collections.blogs | getNextCollectionItem(page) %}
-            {% set mostRecent = posts[0] %}
+            {% set mostRecent = posts[posts.length-1] %}
             
             {% if mostRecent.url != page.url and mostRecent.url != nextPost.url %}
+                <h3>most recent post</h3>
+                {% from "_blogSmallCard.njk" import smallBlogCard %} 
+                {{smallBlogCard({
+                    cardLink: mostRecent.url,
+                    cardTitle: mostRecent.data.title,
+                    cardImage: mostRecent.data.image,
+                    cardImageAlt: mostRecent.data.imageAlt,
+                    cardDescription: mostRecent.data.description
+                    } 
+                    )}}
+            {% endif %}
+            {% if prevPost.url%}
                 <div>
-                    <h3>most recent post</h3>
-                    <div class="mostRecent card" style="width: 18rem;">
-                        <img src="{{mostRecent.data.image}}" class="card-img-top" alt="{{mostRecent.data.imageAlt}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{mostRecent.data.title}}</h5>
-                            <p class="card-text">{{mostRecent.data.description}}</p>
-                            <a href="{{mostRecent.url}}" class="btn btn-primary">most recent</a>
-                        </div>
-                    </div>
+                    <h3>⬅️ previous post</h3>
+                    {% from "_blogSmallCard.njk" import smallBlogCard %} 
+                    {{smallBlogCard({
+                    cardLink: prevPost.url,
+                    cardTitle: prevPost.data.title,
+                    cardImage: prevPost.data.image,
+                    cardImageAlt: prevPost.data.imageAlt,
+                    cardDescription: prevPost.data.description
+                    } 
+                    )}}
                 </div>
             {% endif %}
-
-            {% if prevPost.url != mostRecent.url and page.url != mostRecent.url%}
-                <div>
-                    <h3>⬅️previous post</h3>
-                    <div class="prevPost card" style="width: 18rem;">
-                        <img src="{{prevPost.data.image}}" class="card-img-top" alt="{{prevPost.data.imageAlt}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{prevPost.data.title}}</h5>
-                            <p class="card-text">{{prevPost.data.description}}</p>
-                            <a href="{{prevPost.url}}" class="btn btn-primary">Previous post</a>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-
             {% if nextPost %}
                 <div>
-                    <h3>next post➡️</h3>
-                    <div class="nextPost card" style="width: 18rem;">
-                        <img src="{{nextPost.data.image}}" class="card-img-top" alt="{{nextPost.data.imageAlt}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{nextPost.data.title}}</h5>
-                            <p class="card-text">{{nextPost.data.description}}</p>
-                            <a href="{{nextPost.url}}" class="btn btn-primary">Next post</a>
-                        </div>
-                    </div>
+                    <h3>next post ➡️</h3>
+                     {% from "_blogSmallCard.njk" import smallBlogCard %} 
+                    {{smallBlogCard({
+                    cardLink: nextPost.url,
+                    cardTitle: nextPost.data.title,
+                    cardImage: nextPost.data.image,
+                    cardImageAlt: nextPost.data.imageAlt,
+                    cardDescription: nextPost.data.description
+                    } 
+                    )}}
                 </div>
             {% endif %}
         </div>

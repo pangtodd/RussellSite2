@@ -1,4 +1,12 @@
 module.exports = function (eleventyConfig){
+
+    const { DateTime } = require("luxon");
+
+    eleventyConfig.addFilter("basicDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toFormat("MMMM d, yyyy");
+    });
+
+
     eleventyConfig.addPassthroughCopy("src/assets");
 
     eleventyConfig.addCollection("blogs", function(collectionApi){
@@ -12,6 +20,7 @@ module.exports = function (eleventyConfig){
             return a.data.order - b.data.order;
         });
     });
+
     return {
         dir:{
             input: "src",        
