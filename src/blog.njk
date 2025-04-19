@@ -1,0 +1,86 @@
+---
+title: blog
+layout: base.njk
+--- 
+<div class="hero">
+    <img src="/assets/images/secondComingWide.webp" class="d-block w-100" alt="Hero Image">
+</div>
+<div class="container mt-3">
+
+<section id="blogs">
+  <div class="container mt-3">
+    <h1 class="text-center">Blog posts</h1>
+    <h3 class="text-center">From the pen of Manruss</h3>
+    <!-- Visible cards section -->
+    {% set blogsFirstDozen = collections.blogs.slice(0, 12).reverse() %}
+    {% if blogsFirstDozen.length > 0 %}
+      {% for blog in blogsFirstDozen %}
+        {% if loop.index0 % 4 ==0 %}
+          <div class="row">
+        {% endif %}
+      <div class="col-lg-3 mt-3">
+                {% from "_blogSmallCard.njk" import smallBlogCard %} 
+                {{smallBlogCard({
+                    cardLink: blog.url,
+                    cardTitle: blog.data.title,
+                    cardImage: blog.data.image,
+                    cardImageAlt: blog.data.imageAlt,
+                    cardDescription: blog.data.description
+                    } 
+                    )}}
+      </div>
+      {% if loop.index % 4 == 0 or loop.last%}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+    <!-- <div class="d-none" id="collapser"> -->
+    <div class="collapse" style="transition: 2s" id="collapser">
+      <!--put loop for remaining blog cards here-->
+    {% set remainingBlogs = collections.blogs.slice(12) %}
+    {% if remainingBlogs.length > 0 %}
+    {% for blog in remainingBlogs %}
+        {% if loop.index0 % 4 ==0 %}
+          <div class="row">
+        {% endif %}
+      <div class="col-lg-3 mt-3">
+        {% from "_blogSmallCard.njk" import smallBlogCard %} 
+                {{smallBlogCard({
+                    cardLink: blog.url,
+                    cardTitle: blog.data.title,
+                    cardImage: blog.data.image,
+                    cardImageAlt: blog.data.imageAlt,
+                    cardDescription: blog.data.description
+                    } 
+                    )}}
+      </div>
+      {% if loop.index % 4 == 0 or loop.last%}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+    </div>
+    {% if collections.blogs.length > 12%}
+    <div>
+      <br />
+      <p class="text-center">
+        <button
+          id="moreBlog"
+          class="btn btn-success"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapser"
+          aria-expanded="false"
+          aria-controls="collapse"
+          aria-label="expand display of blogs"
+        >
+          <!-- filled in via css -->
+        </button>
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+</div>
+
