@@ -12,7 +12,12 @@ layout: base.njk
     <h1 class="text-center">Blog posts</h1>
     <h3 class="text-center">From the pen of Manruss</h3>
     <!-- Visible cards section -->
-    {% set blogsFirstDozen = collections.blogs.slice(0, 12).reverse %}
+    <p> how many books? {{collections.books.length}}</p>
+    <p> how many blogs? {{ collections.blogs.length }}</p>
+
+    {% set blogsFirstDozen = collections.blogs.slice(0, 12).reverse() %}
+        <p> how many? {{ blogsFirstDozen.length }}</p>
+        <p> how many raw? {{ collections.blogs.length }} </p>
     {% if blogsFirstDozen.length > 0 %}
       {% for blog in blogsFirstDozen %}
         {% if loop.index0 % 4 ==0 %}
