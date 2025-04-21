@@ -8,6 +8,8 @@ module.exports = function (eleventyConfig){
 
 
     eleventyConfig.addPassthroughCopy("src/assets");
+    eleventyConfig.addPassthroughCopy("src/admin");
+
 
     eleventyConfig.addCollection("blogs", function(collectionApi){
         return collectionApi.getFilteredByGlob("src/blogs/*.md").sort(function(a,b){
