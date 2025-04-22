@@ -37,4 +37,3 @@ collections:
       - { label: "order", name: "order", widget: "number", required: false, default: 5,   value_type: "int", hint: "sets display priority for book- 1 = top of list, 10 = bottom of list"} 
       - { label: "quote", name: "quote", widget: "string", required: false, hint: "only use if quoting an article or person in the body of the message"}
       - { label: "Body", name: "body", widget: "string",  hint: "use quotation marks if using a quote", pattern: ["^.{0,250}$", "Must be 250 characters or fewer."] }
----
