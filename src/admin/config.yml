@@ -10,31 +10,40 @@ collections:
     label: "Blog"
     folder: "src/blogs"
     create: true
+    identifier_field: title # Added for better list view
     slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "description", name: "description", widget: "string", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."]}
-      - { label: "Date", name: "date", widget: "datetime", hint: "will default to submission time, only choose time different", required: false,  default: now}
-      - { label: "updated", name: "updated", label: "Last Updated", widget: "meta", meta: { type: "updatedAt", format: "YYYY-MM-DD HH:mm:ss Z" } }
-      - { label: "author", name: "author", widget: "string", default: "Mark Russell" }
-      - { label: "image", name: "image", widget: "image"}
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false}
+      - { label: "Publication Date", name: "date", widget: "datetime", hint: "Defaults to submission time if no date is picked", required: false,  default: now}
+      - name: "updated"
+        label: "Last Updated" 
+        widget: "meta"
+        meta: { type: "updatedAt", format: "YYYY-MM-DD HH:mm:ss Z" }
+
+      - { label: "Author", name: "author", widget: "string", default: "Mark Russell", required: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false}
       - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false}
-      - { label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}, required: false} 
-      - { label: "Featured", name: "featured", widget: "boolean", hint: "set to true for new/coming soon front page", default: false} 
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}, required: false}
+      - { label: "Featured", name: "featured", widget: "boolean", hint: "Set to true to highlight on the front page.", default: false, required: false}
+      - { label: "Body", name: "body", widget: "markdown", required: false } # Assuming main content is markdown
 
   - name: "books"
     label: "Books"
     folder: "src/books"
     create: true
+    identifier_field: title 
     slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", required: false, hint: "will deftaul to subission time if no date is picked", default: now }
-      - { label: "artist", name: "artist", widget: "string" }
-      - { label: "image", name: "image", widget: "image"}      
-      - { label: "link", name: "link", widget: "string", hint: "purchase link (have been using Amazon)"}
-      - { label: "order", name: "order", widget: "number", required: false, default: 5,   value_type: "int", hint: "sets display priority for book- 1 = top of list, 10 = bottom of list"} 
-      - { label: "quote", name: "quote", widget: "string", required: false, hint: "only use if quoting an article or person in the body of the message"}
-      - { label: "Body", name: "body", widget: "string",  hint: "use quotation marks if using a quote", pattern: ["^.{0,250}$", "Must be 250 characters or fewer."] }
----
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Publication Date", name: "date", widget: "datetime", required: false, hint: "Defaults to submission time if no date is picked", default: now } 
+      - { label: "Artist", name: "artist", widget: "string", required: false }
+      - { label: "Book Cover Image", name: "image", widget: "image", required: false, hint: "Upload the book cover image."}
+      - { label: "Purchase Link", name: "link", widget: "string", required: false, hint: "Purchase link (e.g., Amazon URL)"}
+      - { label: "Display Order", name: "order", widget: "number", required: false, default: 5, value_type: "int", hint: "Sets display priority (lower number appears closer to the top)"}
+      - { label: "Quote Source", name: "quote_source", widget: "string", required: false, hint: "Source of the featured quote (e.g., 'NPR news')"}
+      - label: "Quote Text"
+        name: "body"
+        widget: "text" 
+        required: false
+        hint: "The text of the featured quote."
