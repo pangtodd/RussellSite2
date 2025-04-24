@@ -10,23 +10,24 @@ collections:
     label: "Blog"
     folder: "src/blogs"
     create: true
-    identifier_field: title # Added for better list view
+    l 
+    identifier_field: title 
     slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false}
-      - { label: "Publication Date", name: "date", widget: "datetime", hint: "Defaults to submission time if no date is picked", required: false,  default: now}
+      - { label: "Description", name: "description", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false }
+      - { label: "Publication Date", name: "date", widget: "meta", meta: {type: "createdAt", format: "YYYY-MM-DD HH:mm:ss Z" },  required: false }
       - name: "updated"
         label: "Last Updated" 
         widget: "meta"
         meta: { type: "updatedAt", format: "YYYY-MM-DD HH:mm:ss Z" }
-
       - { label: "Author", name: "author", widget: "string", default: "Mark Russell", required: false }
       - { label: "Featured Image", name: "image", widget: "image", required: false}
       - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false}
       - { label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}, required: false}
       - { label: "Featured", name: "featured", widget: "boolean", hint: "Set to true to highlight on the front page.", default: false, required: false}
-      - { label: "Body", name: "body", widget: "markdown", required: false } # Assuming main content is markdown
+      - { label: "Layout", name: "layout", widget:"hidden", default: "post.njk"}
+      - { label: "Body", name: "body", widget: "markdown", required: false } 
 
   - name: "books"
     label: "Books"
@@ -36,14 +37,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Publication Date", name: "date", widget: "datetime", required: false, hint: "Defaults to submission time if no date is picked", default: now } 
+      - { label: "Publication Date", name: "date", widget: "datetime", required: false } 
       - { label: "Artist", name: "artist", widget: "string", required: false }
       - { label: "Book Cover Image", name: "image", widget: "image", required: false, hint: "Upload the book cover image."}
       - { label: "Purchase Link", name: "link", widget: "string", required: false, hint: "Purchase link (e.g., Amazon URL)"}
       - { label: "Display Order", name: "order", widget: "number", required: false, default: 5, value_type: "int", hint: "Sets display priority (lower number appears closer to the top)"}
       - { label: "Quote Source", name: "quote_source", widget: "string", required: false, hint: "Source of the featured quote (e.g., 'NPR news')"}
-      - label: "Quote Text"
-        name: "body"
-        widget: "text" 
-        required: false
-        hint: "The text of the featured quote."
+      - { label: "permalink", name: "permalink", widget: "hidden", default: false}
+      - {label: "Quote Text", name: "body", widget: "text", required: false, hint: "include quotes if needed."}
