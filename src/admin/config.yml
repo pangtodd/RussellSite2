@@ -10,7 +10,7 @@ collections:
     label: "Blog"
     folder: "src/blogs"
     create: true
-    l 
+    
     identifier_field: title 
     slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
     fields:
