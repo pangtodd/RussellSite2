@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--Swap our for actual link-->
-    <link rel="canonical" href="https://www.markrussellbooks.com" />
+    <link rel="canonical" href="{{site.url+page.url}}" />
 
     <meta
       name="description"
-      content="Mark Russell, author. Eisner Award winner. GLAAD Award winner. Devourer of waffles."
+      content="{{description}}"
     />
 
     <!-- Primary Meta Tags -->
@@ -19,41 +17,37 @@
       name="title"
       content={{title}}
     />
-    <meta
-      name="description"
-      content="Mark Russell, your favorite comic book author's favorite author. Eisner and GLAAD Award winner. Devourer of waffles."
-    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.markrussellbooks.com" />
+    <meta property="og:url" content="{{site.url+page.url}}" />
     <meta
       property="og:title"
-      content="Mark Russell, comic book author. Book book author."
+      content="{{title}}"
     />
     <meta
       property="og:description"
-      content="Mark Russell, your favorite comic book author's favorite author. Eisner and GLAAD Award winner. Devourer of waffles."
+      content="{{description}}"
     />
     <meta
       property="og:image"
-      content="https://stirring-beignet-ce08d6.netlify.app/images/flickCroppy.webp"
+      content="{{image}}"
     />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.markrussellbooks.com" />
+    <meta property="twitter:url" content="{{site.url+page.url}}" />
     <meta
       property="twitter:title"
-      content="Mark Russell, comic book author. Book book author."
+      content="{{title}}"
     />
     <meta
       property="twitter:description"
-      content="Mark Russell, your favorite comic book author's favorite author. Eisner and GLAAD Award winner. Devourer of waffles."
+      content="{{description}}"
     />
     <meta
       property="twitter:image"
-      content="https://stirring-beignet-ce08d6.netlify.app/images/flickCroppy.webp"
+      content="{{image}}"
     />
 
     <!--Favicons.-->
@@ -139,12 +133,14 @@
       type="font/ttf"
       crossorigin
     />
+    {% if page.url == "/"%}
     <link
       rel="preload"
       href="/images/Not-All-Robots-1.webp"
       as="image"
       type="image/jpeg"
     />
+    {% endif %}
     <!-- Only above the fold css-->
     <meta
       http-equiv="Content-Security-Policy"
