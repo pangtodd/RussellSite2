@@ -165,6 +165,15 @@ html *{
   background: #ff3636;
 }
 
+.blog-title{
+  border-bottom: solid 4px;
+  margin-bottom: 4rem;
+}
+
+.blog-headline{
+  margin-bottom: 2rem;
+}
+
 .blogCard {
   width: auto; 
   height: 450px; 
@@ -175,11 +184,26 @@ html *{
 }
 
 .small-blog-card {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-card-img-top{
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 766px){
+  .blog-card-img-top{
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 992px){
   .blogCard{ margin: auto}
+  .nav-link{background-color: black; padding-left:10px!important; width:40%; opacity: 85%;}
 }
 
 .blogCard .card-img-top{
@@ -227,6 +251,38 @@ html *{
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+.share {
+  text-align: center;
+}
+
+.share a {
+  display: inline-block;
+  margin: 0 8px; 
+  text-decoration: none; 
+  vertical-align: middle; 
+}
+
+.share a svg {
+  height: 24px; 
+  width: auto;
+  display: block;
+  margin: 0 auto; 
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
 
 .card-link {
   text-decoration: none;
