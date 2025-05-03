@@ -203,7 +203,7 @@ html *{
 
 @media screen and (max-width: 992px){
   .blogCard{ margin: auto}
-  .nav-link{background-color: black; padding-left:10px!important; width:40%; opacity: 85%;}
+  #navbarSupportedContent .nav-link{background-color: black; padding-left:10px!important; width:40%; opacity: 85%;}
 }
 
 .blogCard .card-img-top{
