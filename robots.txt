@@ -94,3 +94,4 @@ Disallow: /
 User-agent: *
 Disallow: /admin
 
+sitemap: https://markrussellbooks.com/sitemap.xml
