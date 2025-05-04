@@ -16,7 +16,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false }
-      - {label: "Date", name: "date", widget: "datetime", default: now, format: "YYYY-MM-DD"} 
+      - name: "date"
+        label: "Date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        time_format: false
+        date_format: "YYYY-MM-DD"
+        picker_utc: false
+        default: "{% commit_date %}"
       - name: "updated"
         label: "Last Updated" 
         widget: "meta"
@@ -37,11 +44,18 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - {label: "Date", name: "date", widget: "datetime", default: now, format: "YYYY-MM-DD"} 
+      - name: "date"
+        label: "Date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        time_format: false
+        date_format: "YYYY-MM-DD"
+        picker_utc: false
+        default: "{% commit_date %}"
       - { label: "Artist", name: "artist", widget: "string", required: false }
       - { label: "Book Cover Image", name: "image", widget: "image", required: false, hint: "Upload the book cover image."}
       - { label: "Purchase Link", name: "link", widget: "string", required: false, hint: "Purchase link (e.g., Amazon URL)"}
       - { label: "Display Order", name: "order", widget: "number", required: false, default: 5, value_type: "int", hint: "Sets display priority (lower number appears closer to the top)"}
-      - { label: "Quote Source", name: "quote_source", widget: "string", required: false, hint: "Source of the featured quote (e.g., 'NPR news')"}
+      - { label: "Quote Source", name: "quote", widget: "string", required: false, hint: "Source of the featured quote (e.g., 'NPR news')"}
       - { label: "permalink", name: "permalink", widget: "hidden", default: false}
       - {label: "Quote Text", name: "body", widget: "text", required: false, hint: "include quotes if needed."}
