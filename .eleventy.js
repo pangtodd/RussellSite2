@@ -5,6 +5,12 @@ module.exports = function (eleventyConfig){
     eleventyConfig.addFilter("basicDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toFormat("MMMM d, yyyy");
     });
+    eleventyConfig.addFilter("isoDate", function(dateObj) {
+        if (!(dateObj instanceof Date)) {
+            return ''; 
+        }
+    return DateTime.fromJSDate(dateObj).toUTC().toISO();
+    });
 
 
     eleventyConfig.addPassthroughCopy("src/assets");
