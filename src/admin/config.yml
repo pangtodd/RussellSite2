@@ -19,8 +19,9 @@ collections:
       - label: "Date"
         name: "date"
         widget: "date"
-        default: ""
+        default: "now"
         format: "YYYY-MM-DD"
+        required: false 
       - name: "updated"
         label: "Last Updated" 
         widget: "meta"
@@ -44,7 +45,7 @@ collections:
       - label: "Date"
         name: "date"
         widget: "date"
-        default: ""
+        default: "now"
         format: "YYYY-MM-DD"
       - { label: "Artist", name: "artist", widget: "string", required: false }
       - { label: "Book Cover Image", name: "image", widget: "image", required: false, hint: "Upload the book cover image."}
