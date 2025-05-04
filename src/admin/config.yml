@@ -16,14 +16,11 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false }
-      - name: "date"
-        label: "Date"
-        widget: "datetime"
+      - label: "Date"
+        name: "date"
+        widget: "date"
+        default: ""
         format: "YYYY-MM-DD"
-        time_format: false
-        date_format: "YYYY-MM-DD"
-        picker_utc: false
-        default: "{{year}}-{{month}}-{{day}}"
       - name: "updated"
         label: "Last Updated" 
         widget: "meta"
@@ -44,14 +41,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - name: "date"
-        label: "Date"
-        widget: "datetime"
+      - label: "Date"
+        name: "date"
+        widget: "date"
+        default: ""
         format: "YYYY-MM-DD"
-        time_format: false
-        date_format: "YYYY-MM-DD"
-        picker_utc: false
-        default: "{{year}}-{{month}}-{{day}}"
       - { label: "Artist", name: "artist", widget: "string", required: false }
       - { label: "Book Cover Image", name: "image", widget: "image", required: false, hint: "Upload the book cover image."}
       - { label: "Purchase Link", name: "link", widget: "string", required: false, hint: "Purchase link (e.g., Amazon URL)"}
