@@ -23,7 +23,7 @@ collections:
         time_format: false
         date_format: "YYYY-MM-DD"
         picker_utc: false
-        default: "{% commit_date %}"
+        default: "{{year}}-{{month}}-{{day}}"
       - name: "updated"
         label: "Last Updated" 
         widget: "meta"
@@ -51,7 +51,7 @@ collections:
         time_format: false
         date_format: "YYYY-MM-DD"
         picker_utc: false
-        default: "{% commit_date %}"
+        default: "{{year}}-{{month}}-{{day}}"
       - { label: "Artist", name: "artist", widget: "string", required: false }
       - { label: "Book Cover Image", name: "image", widget: "image", required: false, hint: "Upload the book cover image."}
       - { label: "Purchase Link", name: "link", widget: "string", required: false, hint: "Purchase link (e.g., Amazon URL)"}
