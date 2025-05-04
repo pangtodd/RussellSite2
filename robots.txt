@@ -88,6 +88,9 @@ Disallow: /
 User-agent: omgilibot
 Disallow: /
 
+User-agent: GrokBot
+Disallow: /
+
 User-agent: *
 Disallow: /admin
 
