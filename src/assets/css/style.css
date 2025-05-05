@@ -187,6 +187,10 @@ html *{
   margin-bottom: 2rem;
 }
 
+.small-blog-card .card-body{
+  max-height: 254px;
+}
+
 .blog-card-img-top{
   width: 50%;
   height: auto;
@@ -198,6 +202,11 @@ html *{
   .blog-card-img-top{
     width: 100%;
     height: auto;
+  }
+  .pressLogo{
+    max-width: 33%;
+    margin: auto;
+    padding-top: 50px;
   }
 }
 
@@ -293,6 +302,8 @@ html *{
 .card-link:hover {
   text-decoration: none;
 }
+
+
 
 /* collapse stuff */
 
