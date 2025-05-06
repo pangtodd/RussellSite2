@@ -17,6 +17,14 @@ module.exports = function (eleventyConfig){
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("robots.txt");
 
+    eleventyConfig.addCollection("featuredPost", function(collectionApi) {
+        const featuredPosts = collectionApi.getFilteredByGlob("src/blogs/*.md") // Replace "your-blog-posts-glob" with the actual glob for your blog posts (e.g., "posts/*.md")
+          .filter(item => item.data.featured === true);
+        featuredPosts.sort((a, b) => b.date - a.date);
+        return featuredPosts.slice(0, 1);
+      });
+    
+
 
     eleventyConfig.addCollection("blogs", function(collectionApi){
         return collectionApi.getFilteredByGlob("src/blogs/*.md").sort(function(a,b){
