@@ -33,6 +33,12 @@ html *{
   margin-top: 4rem;
 }
 
+.booksHero{
+  max-height: 400px;
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+}
 
 .comingSoonImg{
   padding-bottom: 2rem;
@@ -85,7 +91,13 @@ html *{
 #footer {
   text-align: center;
   background-color: black;
-  color: white
+  color: white;
+  margin-top: 4rem;
+}
+
+.footerContent{
+  display: flex;
+  padding-top: 2rem;
 }
 
 /* <- card stuff-> */
