@@ -1,0 +1,59 @@
+---
+title: Mark Russell bibliography
+image: https://stirring-beignet-ce08d6.netlify.app/images/flickCroppy.webp
+description: complete bibliography of Mark Russell's published works.
+layout: base.njk
+--- 
+<div class="hero">
+    <img src="/assets/images/disappointed-cropped.jpg" class="d-block w-100 booksHero" alt="Hero Image">
+</div>
+<div class="container mt-3">
+
+
+
+<section id="books">
+  <div class="container mt-3">
+    <h1 class="text-center">Books</h1>
+    <h3 class="text-center">Comic books. And book books.</h3>
+    <!-- Visible cards section -->
+    {% set books = collections.books %}
+    {% if books.length > 0 %}
+      {% for book in books %}
+        {% if loop.index0 % 4 ==0 %}
+          <div class="row">
+        {% endif %}
+      <div class="col-lg-3 mt-3">
+        <div class="card">
+          <div class="image">
+            <img
+              class="card-img-top"
+              src="{{ book.data.image }}"
+              alt="cover of {{ book.data.title }}"
+              style="width: 100%"
+            />
+          </div>
+          <div class="details">
+            <div class="center">
+              <h1>{{ book.data.title }}</h1>
+              <p>
+                {{ book.content | safe }}
+                {%if book.data.quote%}
+                  <br />-{{book.data.quote}} 
+                {% endif %}
+                <br />Art by {{book.data.artist}}
+              </p>
+              <a
+                href="{{book.data.link}}"
+                class="btn btn-success"
+                >buy now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if loop.index % 4 == 0 or loop.last%}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+</section>
