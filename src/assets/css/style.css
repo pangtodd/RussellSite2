@@ -147,7 +147,7 @@ html *{
   top: 50%;
   transform: translateY(-50%);
 }
-.card .details .center h1 {
+.card .details .center h3 {
   margin: 0;
   padding: 0;
   color: #ff3636;
@@ -183,6 +183,23 @@ html *{
   line-height: 30px;
   text-align: center;
   transform: .5s;
+}
+
+.press {
+  box-sizing: border-box;
+}
+
+.press.card-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  display: block;
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+
+.press.card {
+  justify-content: center;
+  max-width:540px;
 }
 .card .details .center ul li a:hover {
   background: #ff3636;
