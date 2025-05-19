@@ -53,7 +53,7 @@ layout: base.njk
         />
       </picture>
       <div class="carousel-caption">
-        <h5>Superman Space Age</h5>
+        <p class= "fs-5">Superman Space Age</p>
         <p>art by Mike Allred</p>
       </div>
     </div>
@@ -74,7 +74,7 @@ layout: base.njk
         />
       </picture>
       <div class="carousel-caption">
-        <h5>Traveling to Mars</h5>
+        <p class= "fs-5">Traveling to Mars</p>
         <p>art by Roberto Meli</p>
       </div>
     </div>
@@ -95,7 +95,7 @@ layout: base.njk
         />
       </picture>
       <div class="carousel-caption">
-        <h5>Not All Robots</h5>
+        <p class= "fs-5">Not All Robots</p>
         <p>art by Mike Deodato Jr.</p>
       </div>
     </div>
@@ -116,7 +116,7 @@ layout: base.njk
         />
       </picture>
       <div class="carousel-caption">
-        <h5>One Star Squadron</h5>
+        <p class= "fs-5">One Star Squadron</p>
         <p>art by Steve Lieber</p>
       </div>
     </div>
@@ -139,11 +139,13 @@ layout: base.njk
   </button>
 </div>
 
+<h1 class="text-center" style="margin-top: 4rem">Mark Russell. Comic book author. Book book author.</h1>
+
 {% if collections.featuredPost.length %}
   {% set featuredPost = collections.featuredPost[0] %}
 <section id="comingSoon">
   <div class="container mt-4 pt-4" style="text-align: center">
-      <h1 class="text-center comingSoon-headline">Upcoming projects and appearances</h1>
+      <h2 class="text-center comingSoon-headline">Upcoming projects and appearances</h1>
       <h3>{{ featuredPost.data.title }}</h3>
       <h4> {{ featuredPost.data.description }}</h4>
       <img
@@ -161,8 +163,7 @@ layout: base.njk
 
 <section id="books">
   <div class="container mt-3">
-    <h1 class="text-center">Books</h1>
-    <h3 class="text-center">Comic books. And book books.</h3>
+    <h2 class="fs-1 text-center">Books</h2>
     <!-- Visible cards section -->
     {% set booksFirstDozen = collections.books.slice(0, 12) %}
     {% if booksFirstDozen.length > 0 %}
@@ -182,7 +183,7 @@ layout: base.njk
           </div>
           <div class="details">
             <div class="center">
-              <h1>{{ book.data.title }}</h1>
+              <h3>{{ book.data.title }}</h3>
               <p>
                 {{ book.content | safe }}
                 {%if book.data.quote%}
@@ -204,118 +205,103 @@ layout: base.njk
       {% endif %}
     {% endfor %}
     {% endif %}
-    <!-- <div class="d-none" id="collapser"> -->
-    <div class="collapse" style="transition: 2s" id="collapser">
-      <!--put loop for remaining books here-->
-    {% set remainingBooks = collections.books.slice(12) %}
-    {% if remainingBooks.length > 0 %}
-    {% for book in remainingBooks %}
-        {% if loop.index0 % 4 ==0 %}
-          <div class="row">
-        {% endif %}
-      <div class="col-lg-3 mt-3">
-        <div class="card">
-          <div class="image">
-            <img
-              class="card-img-top"
-              src="{{ book.data.image }}"
-              alt="cover of {{ book.data.title }}"
-              style="width: 100%"
-            />
-          </div>
-          <div class="details">
-            <div class="center">
-              <h1>{{ book.data.title }}</h1>
-              <p>
-                {{ book.content | safe }}
-                {%if book.data.quote%}
-                  <br />-{{book.data.quote}} 
-                {% endif %}
-                <br />Art by {{book.data.artist}}
-              </p>
-              <a
-                href="{{book.data.link}}"
-                class="btn btn-success"
-                >buy now</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      {% if loop.index % 4 == 0 or loop.last%}
-        </div>
-      {% endif %}
-    {% endfor %}
-    {% endif %}
-    </div>
-    <div>
-      <br />
-      <p class="text-center">
-        <button
-          id="moreBooks"
-          class="btn btn-success"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapser"
-          aria-expanded="false"
-          aria-controls="collapse"
-          aria-label="expand display of books"
-        >
-          <!-- filled in via css -->
-        </button>
-      </p>
+    
+    <div class="text-center" style="margin-top: 10px">
+      <br>
+      <a href="/books" class="text-center btn btn-success" aria-label="link to books">more books</a>
     </div>
   </div>
 </section>
 
 <section id="sales">
   <div class="container mt-4 pt-4" style="text-align: center">
-    <h1>Coming Soon: items for sale</h1>
+    <h2>Coming Soon: items for sale</h2>
     <img
       src="assets/images/crap.webp"
       class="rounded mx-auto d-block"
       alt="Flinstones panel of guy talking about loving his 'crap'"
     />
-    <h4>
+    <h3>
       <br />Check back soon for autographed books, one-of-kind collectables,
       and items sure to surprise and delight!
-    </h4>
+    </h3>
   </div>
 </section>
 
-    <section id="about">
-      <div class="container mt-4 pt-4">
-        <h1 class="text-center">About</h1>
-        <div class="row mt-4">
-          <div class="col-lg-4">
-            <img
-              src="assets/images/Mark Russell Headshot 1.webp"
-              class="imageAboutPage"
-              alt="headshot of Mark Russell"
-            />
-          </div>
-          <div class="col-lg-8">
-            <p class="bio_text">
-              Mark Russell is an author, comic book writer, and cartoonist
-              living and toiling in Portland, Oregon. The works he is known for
-              include God Is Disappointed in You, a modern re-telling of the
-              Bible, The Flintstones, Exit Stage Left: The Snagglepuss
-              Chronicles (Winner of the 2019 GLAAD Award for Outstanding Comic),
-              Not All Robots (Winner of the 2022 Eisner Award for Best Humor
-              Comic), and Superman: Space Age, which tells the story of Superman
-              and his loved ones, living against the backdrop of Cold War
-              America. As far as he knows, all his books are still in print.
-            </p>
-          </div>
-        </div>
+<section id="about">
+  <div class="container mt-4 pt-4">
+    <h2 class="fs-1 text-center">About</h2>
+    <div class="row mt-4">
+      <div class="col-lg-4">
+        <img
+          src="assets/images/Mark Russell Headshot 1.webp"
+          class="imageAboutPage"
+          alt="headshot of Mark Russell"
+        />
       </div>
-    </section>
-     
-     
-
+      <div class="col-lg-8">
+        <p class="bio_text">
+          Mark Russell is an author, comic book writer, and cartoonist
+          living and toiling in Portland, Oregon. The works he is known for
+          include God Is Disappointed in You, a modern re-telling of the
+          Bible, The Flintstones, Exit Stage Left: The Snagglepuss
+          Chronicles (Winner of the 2019 GLAAD Award for Outstanding Comic),
+          Not All Robots (Winner of the 2022 Eisner Award for Best Humor
+          Comic), and Superman: Space Age, which tells the story of Superman
+          and his loved ones, living against the backdrop of Cold War
+          America. As far as he knows, all his books are still in print.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
+{% if collections.press.length %}
+  {% set pressPosts = collections.press %}
 <section id="press">
+  <div class="container mt-4 pt-4">
+      <h2 class="fs-1 text-center">Press</h2>
+      {% for pressPost in pressPosts %}
+        {% if loop.index0 % 3 == 0 %}
+        <div class="row">
+        {% endif %}
+          <div class="col-lg-4">
+            <a
+              class="cardLink"
+              href="{{ pressPost.data.link }}"
+              aria-label="link to article"
+            >
+              <div class="card mb-3 h-100" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4 row align-items-center">
+                    <img
+                      src="{{ pressPost.data.image }}"
+                      class="pressLogo"
+                      alt=" {{ pressPost.data.imageAlt }}"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="press card-body">
+                      <h3 class="fs-5 press card-title">
+                        {{ pressPost.content|safe }}
+                      </h3>
+                      <p class="press card-text">
+                        <small class="text-muted">{{ pressPost.data.citation }}</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% if loop.index % 3 == 0 or loop.last%}
+        </div>
+        {% endif %}
+        {% endfor %}
+</section>
+{% endif %}
+
+<section id="pressOld">
   <div class="container mt-4 pt-4">
     <h1 class="text-center">Press</h1>
     <div class="row">
@@ -325,7 +311,7 @@ layout: base.njk
           class="cardLink"
           href="https://www.vox.com/culture/2017/3/22/15000062/flintstones-comic-interview-russell-pugh"
         >
-          <div class="card mb-3 h-100" style="max-width: 540px">
+          <div class="press card mb-3 h-100">
             <div class="row g-0">
               <div class="col-md-4 row align-items-center">
                 <img
@@ -335,15 +321,14 @@ layout: base.njk
                 />
               </div>
               <div class="col-md-8">
-                <div class="card-body">
-                  <br />
-                  <h5 class="card-title">
+                <div class="press card-body">
+
+                  <div class="press card-title">
                     The creators of The Flintstones comic on bringing
                     existential dread to Bedrock.
-                  </h5>
-                  <p class="card-text"></p>
-                  <br />
-                  <p class="card-text">
+                  </div>
+
+                  <p class="press card-text">
                     <small class="text-muted"
                       >VOX, Alex Abad-Santos, April 6, 2017</small
                     >
@@ -496,6 +481,7 @@ layout: base.njk
         <a
           class="cardLink"
           href="https://www.npr.org/2018/08/02/634937720/yabbadabba-what-these-arent-the-flintstones-you-remember"
+          target="_blank"
         >
           <div class="card mb-3 h-100 mt-3" style="max-width: 540px">
             <div class="row g-0">
@@ -532,13 +518,14 @@ layout: base.njk
 
 <section id="contact">
   <div class="container mt-3 contactContent">
-    <h1 class="text-center">Contact</h1>
+    <h2 class="fs-1 text-center">Contact</h2>
     <h3></h3>
 
     <p>
       <a 
         class="nav-link" 
         href="https://bsky.app/profile/manruss.bsky.social"
+        target="_blank"
         aria-label="bluesky Link for Mark Russell"
         >
        <svg 
@@ -558,6 +545,7 @@ layout: base.njk
       <a
         class="nav-link"
         href="https://www.threads.com/@manruss"
+        target="_blank"
         aria-label="Threads Link for Mark Russell"
       >
         <svg 
@@ -578,6 +566,7 @@ layout: base.njk
       <a 
       class="nav-link" 
       href="https://www.instagram.com/manruss/" 
+      target="_blank"
       aria-label="Instagram Link for Mark Russell"
       >
         <svg
