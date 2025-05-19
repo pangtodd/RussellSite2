@@ -6,14 +6,46 @@ media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/blogs"
-    create: true
-    
-    identifier_field: title 
-    slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
-    fields:
+  -name: "press"
+  label: "press"
+  folder: "src/press"
+  create: true
+  identifier_field: title
+  slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}-press"
+  fields:
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "citation", name: "citation", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false }
+      - { label: "Date", name: "date", widget: "date", default: "now", format: "YYYY-MM-DD", required: false }
+      - { label: "image", name: "image", widget: "image", required: false}
+      - { label: "image alt text", name: "imageAlt", widget: "string", required: false}
+      - { label: "Link", name: "link", widget: "string", required: false, help: "provide link if you want text/image linked to url"}   
+      - { label: "Body", name: "body", widget: "markdown", required: false}
+
+
+  -name: "featured"
+  label: "featured"
+  folder: "src/featured"
+  create: true
+  identifier_field: title
+  slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}-featured"
+  fields:
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "Description", name: "description", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false }
+      - { label: "Date", name: "date", widget: "date", default: "now", format: "YYYY-MM-DD", required: false }
+      - { label: "image", name: "image", widget: "image", required: false}
+      - { label: "image alt text", name: "imageAlt", widget: "string", required: false}
+      - { label: "Link", name: "link", widget: "string", required: false, help: "provide link if you want text/image linked to url"}   
+      - { label: "Body", name: "body", widget: "markdown", required: false}
+      - { label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}, required: false}
+
+
+  -name: "blog"
+  label: "Blog"
+  folder: "src/blogs"
+  create: true
+  identifier_field: title 
+  slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}-blog"
+  fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", pattern: ["^.{0,200}$", "Must be 200 characters or fewer."], required: false }
       - label: "Date"
@@ -30,17 +62,16 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image", required: false}
       - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false}
       - { label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}, required: false}
-      - { label: "Featured", name: "featured", widget: "boolean", hint: "Set to true to highlight on the front page.", default: false, required: false}
-      - { label: "Layout", name: "layout", widget:"hidden", default: "post.njk"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
       - { label: "Body", name: "body", widget: "markdown", required: false } 
-
-  - name: "books"
-    label: "Books"
-    folder: "src/books"
-    create: true
-    identifier_field: title 
-    slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}"
-    fields:
+  
+  -name: "books"
+  label: "Books"
+  folder: "src/books"
+  create: true
+  identifier_field: title 
+  slug: "{{year}}-{{month}}-{{day}}-{{title | slugify}}-books"
+  fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - label: "Date"
         name: "date"
