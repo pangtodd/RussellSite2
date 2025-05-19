@@ -4,7 +4,7 @@
         <div class="blogCard card">
             <img src="{{ props.cardImage | default('/assets/images/journal.webp') }}" class="card-img-top" alt="{{ props.cardImageAlt | default('card image') }}">
             <div class="card-body">
-                <h5 class="card-title">{{ props.cardTitle }}</h5>
+                <h2 class="fs-5 card-title">{{ props.cardTitle }}</h2>
                 <p class="card-text">{{ props.cardDescription }}</p>
             </div>
         </div>
