@@ -19,7 +19,6 @@ module.exports = function (eleventyConfig){
 
     eleventyConfig.addCollection("featuredPost", function(collectionApi) {
         const featuredPosts = collectionApi.getFilteredByGlob("src/featured/*.md") 
-          .filter(item => item.data.featured === true);
         featuredPosts.sort((a, b) => b.date - a.date);
         return featuredPosts.slice(0, 1);
       });
