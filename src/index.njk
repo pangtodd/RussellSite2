@@ -141,11 +141,11 @@ layout: base.njk
 
 <h1 class="text-center" style="margin-top: 4rem">Mark Russell. Comic book author. Book book author.</h1>
 
-{% if collections.featuredPost.length %}
+{% if collections.featuredPost.length > 0 %}
   {% set featuredPost = collections.featuredPost[0] %}
 <section id="comingSoon">
   <div class="container mt-4 pt-4" style="text-align: center">
-      <h2 class="text-center comingSoon-headline">Upcoming projects and appearances</h1>
+      <h2 class="fs-1 text-center comingSoon-headline">Upcoming projects and appearances</h1>
       <h3>{{ featuredPost.data.title }}</h3>
       <h4> {{ featuredPost.data.description }}</h4>
       <img
@@ -263,7 +263,7 @@ layout: base.njk
       <h2 class="fs-1 text-center">Press</h2>
       {% for pressPost in pressPosts %}
         {% if loop.index0 % 3 == 0 %}
-        <div class="row">
+        <div class="press row">
         {% endif %}
           <div class="col-lg-4">
             <a
@@ -271,7 +271,7 @@ layout: base.njk
               href="{{ pressPost.data.link }}"
               aria-label="link to article"
             >
-              <div class="card mb-3 h-100" style="max-width: 540px">
+              <div class="card mb-3 h-100">
                 <div class="row g-0">
                   <div class="col-md-4 row align-items-center">
                     <img
@@ -300,221 +300,6 @@ layout: base.njk
         {% endfor %}
 </section>
 {% endif %}
-
-<section id="pressOld">
-  <div class="container mt-4 pt-4">
-    <h1 class="text-center">Press</h1>
-    <div class="row">
-      <!-- row 1 -->
-      <div class="col-lg-4">
-        <a
-          class="cardLink"
-          href="https://www.vox.com/culture/2017/3/22/15000062/flintstones-comic-interview-russell-pugh"
-        >
-          <div class="press card mb-3 h-100">
-            <div class="row g-0">
-              <div class="col-md-4 row align-items-center">
-                <img
-                  src="assets/images/Vox_logo.svg"
-                  class="pressLogo"
-                  alt="Vox Logo"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="press card-body">
-
-                  <div class="press card-title">
-                    The creators of The Flintstones comic on bringing
-                    existential dread to Bedrock.
-                  </div>
-
-                  <p class="press card-text">
-                    <small class="text-muted"
-                      >VOX, Alex Abad-Santos, April 6, 2017</small
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4">
-        <a
-          class="cardLink"
-          href="https://www.salon.com/2019/06/10/snagglepuss-lgbt-hero-legendary-hanna-barbera-character-reborn-in-new-comic-series/"
-        >
-          <div class="card mb-3 h-100" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4 row align-items-center">
-                <img
-                  src="assets/images/salon-logo.svg"
-                  class="pressLogo"
-                  alt="Salon Logo"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <br />
-                  <h5 class="card-title">
-                    Snagglepuss, LGBT hero: Legendary Hanna-Barbera
-                    character reborn in new comic series
-                  </h5>
-                  <p class="card-text"></p>
-                  <br />
-                  <p class="card-text">
-                    <small class="text-muted"
-                      >Salon, Chauncey DeVega, June 10, 2019</small
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4">
-        <a
-          class="cardLink"
-          href="https://www.cbr.com/superman-space-age-mark-russell-mike-allred-interview/"
-        >
-          <div class="card mb-3 h-100" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4 row align-items-center">
-                <img
-                  src="assets/images/cbr-logo-full-colored-light.svg"
-                  class="pressLogo"
-                  alt="Vox Logo"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <br />
-                  <h5 class="card-title">
-                    Superman: Space Age - Mark Russell & Mike Allred Detail
-                    a Grounded, More Contemplative Man of Tomorrow
-                  </h5>
-                  <p class="card-text"></p>
-                  <p class="card-text">
-                    <small class="text-muted"
-                      >CBR, Sam Stone, June 24, 2022
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <!-- row 2 -->
-    <div class="row">
-      <div class="col-lg-4">
-        <a
-          class="cardLink"
-          href="https://screenrant.com/billionaire-island-cult-dogs-ahoy-comics-russell-pugh/"
-        >
-          <div class="card mb-3 h-100 mt-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4 row align-items-center">
-                <img
-                  src="assets/images/Screen_Rant_logo.webp"
-                  class="pressLogo"
-                  alt="Vox Logo"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <br />
-                  <h5 class="card-title">
-                    Billionaire Island: Cult of Dogs Is the Essential Satire
-                    of 2022
-                  </h5>
-                  <p class="card-text"></p>
-                  <br />
-                  <p class="card-text">
-                    <small class="text-muted"
-                      >ScreenRant, Justin Epps, Nov 21, 2022</small
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4">
-        <a
-          class="cardLink"
-          href="https://www.syfy.com/syfy-wire/mark-russell-not-all-robots-creator-owned-comic-toxic-masculinity"
-        >
-          <div class="card mb-3 h-100 mt-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4 row align-items-center">
-                <img
-                  src="assets/images/SyFyLogo.webp"
-                  class="pressLogo"
-                  alt="SyFy logo"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <br />
-                  <h5 class="card-title">
-                    Mark Russell's 'Not All Robots' Is a Parable of Toxic
-                    Masculinity & AI Supremecy in Our Capitalist Hellscape
-                  </h5>
-                  <!-- <p class="card-text"></p> -->
-                  <br />
-                  <p class="card-text">
-                    <small class="text-muted"
-                      >SyFy, Mike Avila May 12, 2021</small
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4">
-        <a
-          class="cardLink"
-          href="https://www.npr.org/2018/08/02/634937720/yabbadabba-what-these-arent-the-flintstones-you-remember"
-          target="_blank"
-        >
-          <div class="card mb-3 h-100 mt-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4 row align-items-center">
-                <img
-                  src="assets/images/npr-logo.svg"
-                  class="pressLogo"
-                  alt="NPR logo"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <br />
-                  <h5 class="card-title" style="text-decoration: none">
-                    Yabbadabba-What? These Aren't The Flintstones You
-                    Remember (audio interview)
-                  </h5>
-                  <p class="card-text"></p>
-                  <br />
-                  <p class="card-text">
-                    <small class="text-muted"
-                      >NPR/OPB, Mallory Yu, Aug 1, 2018
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="contact">
   <div class="container mt-3 contactContent">
