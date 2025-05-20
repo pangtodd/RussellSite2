@@ -185,6 +185,10 @@ html *{
   transform: .5s;
 }
 
+.press.row{
+  margin-bottom: 1rem;
+}
+
 .press {
   box-sizing: border-box;
 }
