@@ -1,0 +1,57 @@
+---
+title: Mark Russell Press
+image: https://stirring-beignet-ce08d6.netlify.app/images/flickCroppy.webp
+description: Collection of press/articles discussing Mark Russell's work.
+layout: base.njk
+--- 
+<div class="hero">
+    <img src="/assets/images/dailyPlanet.webp" class="d-block w-100 booksHero" alt="Hero Image">
+</div>
+<div class="container mt-3">
+
+<section id="Press">
+  <div class="container mt-3">
+    <h1 class="mt-5 press text-center">Press</h1>
+    {% if collections.press.length %}
+    {% set pressPosts = collections.press %}
+        <div class="container mt-4 pt-4">
+        {% for pressPost in pressPosts %}
+            {% if loop.index0 % 3 == 0 %}
+            <div class="press gy-3 row">
+            {% endif %}
+            <div class="col-lg-4">
+                <a
+                class="cardLink"
+                href="{{ pressPost.data.link }}"
+                aria-label="link to article"
+                >
+                <div class="card mb-3 h-100">
+                    <div class="row g-0">
+                    <div class="col-md-4 row align-items-center">
+                        <img
+                        src="{{ pressPost.data.image }}"
+                        class="pressLogo"
+                        alt=" {{ pressPost.data.imageAlt }}"
+                        />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="press card-body">
+                        <h2 class="fs-5 press card-title">
+                            {{ pressPost.content|safe }}
+                        </h2>
+                        <p class="press card-text">
+                            <small class="text-muted">{{ pressPost.data.citation }}</small>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            {% if loop.index % 3 == 0 or loop.last%}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>
