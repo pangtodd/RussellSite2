@@ -263,7 +263,7 @@ layout: base.njk
       <h2 class="fs-1 text-center">Press</h2>
       {% for pressPost in pressPosts %}
         {% if loop.index0 % 3 == 0 %}
-        <div class="press row">
+        <div class="press gy-3 row">
         {% endif %}
           <div class="col-lg-4">
             <a
@@ -271,7 +271,7 @@ layout: base.njk
               href="{{ pressPost.data.link }}"
               aria-label="link to article"
             >
-              <div class="card mb-3 h-100">
+              <div class="card h-100">
                 <div class="row g-0">
                   <div class="col-md-4 row align-items-center">
                     <img
@@ -298,6 +298,11 @@ layout: base.njk
         </div>
         {% endif %}
         {% endfor %}
+    </div>
+     <div class="text-center" style="margin-top: 10px">
+      <br>
+      <a href="/press" class="text-center btn btn-success" aria-label="link to books">more press</a>
+    </div>
 </section>
 {% endif %}
 
