@@ -288,11 +288,41 @@ layout: base.njk
               <div class="card h-100">
                 <div class="row g-0">
                   <div class="col-md-4 row align-items-center">
-                    <img
-                      src="{{ pressPost.data.image }}"
-                      class="pressLogo"
-                      alt=" {{ pressPost.data.imageAlt }}"
-                    />
+
+                                        {% if "https://res.cloudinary.com" in pressPost.data.image %}
+                        {% if ".svg" in pressPost.data.image %}
+                        <img
+                            src="{{ pressPost.data.image }}"
+                            class="pressLogo"
+                            alt="{{ pressPost.data.imageAlt }}"
+                            width="300"
+                            height="150"
+                        />
+                        {% else %}
+                        <img
+                            src="{{ pressPost.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_300/') }}"
+                            srcset="
+                            {{ pressPost.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_200/') }} 200w,
+                            {{ pressPost.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_300/') }} 300w,
+                            {{ pressPost.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }} 400w
+                            "
+                            sizes="(max-width: 767px) 33vw, 10vw"
+                            class="pressLogo"
+                            alt="{{ pressPost.data.imageAlt }}"
+                            width="300"
+                            height="150"
+                        />
+                        {% endif %}
+                    {% else %}
+                        <img
+                        src="{{ pressPost.data.image }}"
+                        class="pressLogo"
+                        alt="{{ pressPost.data.imageAlt }}"
+                        width="300"
+                        height="150"
+                        />
+                    {% endif %} 
+
                   </div>
                   <div class="col-md-8">
                     <div class="press card-body">
