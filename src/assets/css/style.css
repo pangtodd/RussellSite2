@@ -125,6 +125,13 @@ html *{
   opacity: .5;
   transform: translateX(30%);
 }
+
+#books .card .image .card-img-top {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit : cover;
+}
+
 .card .details {
   position: absolute;
   top: 0;
