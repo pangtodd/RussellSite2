@@ -2,7 +2,7 @@
 title: SyFy Not All Robots
 citation: SyFy, Mike Avila May 12, 2021
 date: 2021-05-12
-image: /assets/uploads/syfylogo.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987950/SyFyLogo_mgy6yr.png
 imageAlt: SyFy logo
 link: https://www.syfy.com/syfy-wire/mark-russell-not-all-robots-creator-owned-comic-toxic-masculinity
 ---

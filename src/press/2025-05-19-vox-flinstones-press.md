@@ -2,7 +2,7 @@
 title: Vox Flinstones
 citation: VOX, Alex Abad-Santos, April 6, 2017
 date: 2017-04-06
-image: /assets/uploads/vox_logo.svg
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987952/Vox_logo_g1hnnn.svg
 imageAlt: Vox Logo
 link: https://www.vox.com/culture/2017/3/22/15000062/flintstones-comic-interview-russell-pugh
 ---
