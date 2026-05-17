@@ -1,6 +1,6 @@
 ---
 title: "Superman: Space Age"
-image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987949/Snagglepuss_zkfnlh.jpg
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778989901/Superman_Space_Age_ura8az.webp
 link: https://www.amazon.com/Superman-Space-Age-Mark-Russell/dp/1779518471
 artist: Mike Allred
 order: 3
