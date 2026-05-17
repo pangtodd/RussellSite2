@@ -25,11 +25,11 @@ layout: base.njk
           <div class="image">
           {% if "https://res.cloudinary.com" in book.data.image %}
             <img 
-              src="https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_400/{{ book.data.image }}"
+              src="https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_400/{{ book.data.image }}"
               srcset="
-                https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_400/{{ book.data.image }} 400w,
-                https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_600/{{ book.data.image }} 600w,
-                https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_800/{{ book.data.image }} 800w
+                https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_400/{{ book.data.image }} 400w,
+                https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_600/{{ book.data.image }} 600w,
+                https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_800/{{ book.data.image }} 800w
               "
               sizes="(max-width: 767px) 100vw, 25vw"
               class="card-img-top" 
