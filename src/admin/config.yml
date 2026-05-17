@@ -4,6 +4,12 @@ backend:
 
 media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
+media_library: 
+  name: cloudinary
+  config: 
+    cloud_name: dfbfqlfkc
+    api_key: 687519444541486
+
 
 collections:
   - name: "press"
