@@ -1,6 +1,6 @@
 ---
 title: Not All Robots
-image: /assets/images/NotAllRobots.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987942/NotAllRobots_oqt0g5.jpg
 link: https://www.amazon.com/Not-All-Robots-Mark-Russell/dp/1953165281
 artist: Mike Deodato Jr.
 quote: Patton Oswalt

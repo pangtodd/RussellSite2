@@ -1,6 +1,6 @@
 ---
 title: Billionaire Island
-image: /assets/images/BillionaireIsland.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778989297/BillionaireIsland_lznlge.jpg
 link: https://www.amazon.com/Apocrypha-Now-Mark-Russell-ebook/dp/B01G2FJ5IO/ref=sr_1_34?_encoding=UTF8&qid=1679076323&refinements=p_27%3AMark+Russell&s=digital-text&sr=1-34
 artist: Steven Pugh
 order: 3

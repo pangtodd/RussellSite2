@@ -1,6 +1,6 @@
 ---
 title: "Lone Ranger: The Devil's Rope"
-image: /assets/images/loneRanger.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987939/LoneRanger_h2qyop.jpg
 link: https://www.amazon.com/Lone-Ranger-Devils-Smith-Cattle/dp/1524111430
 artist: Bob Q
 0rder: 10

@@ -1,6 +1,6 @@
 ---
 title: Batman Dark Age
-image: /assets/images/Batman-Dark-Age.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987932/Batman-Dark-Age_lpn6yn.jpg
 link: https://www.amazon.com/Batman-Dark-Age-Mark-Russell-ebook/dp/B0CW1GBKQK
 artist: Mike Allred
 quote: ScreenRant

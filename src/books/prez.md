@@ -1,6 +1,6 @@
 ---
 title: "Prez: Corndog-in-Chief"
-image: /assets/images/Prez.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987945/Prez_oapoec.jpg
 link: https://www.amazon.com/Prez-Vol-1-Mark-Russell/dp/1401259790
 artist: Ben Caldwell
 quote: A.V. Club

@@ -1,6 +1,6 @@
 ---
 title: "The Incal: Psychoverse"
-image: /assets/images/incal.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987938/incal_mf32zf.jpg
 link: https://www.amazon.com/Incal-Psychoverse-Mark-Russell/dp/1643375040
 artist: Yanick Paquette
 quote: IGN.com

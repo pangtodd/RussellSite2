@@ -1,7 +1,7 @@
 ---
 title: Snagglepuss
 image: /assets/images/Snagglepuss.webp
-link: https://www.amazon.com/Exit-Stage-Left-Snagglepuss-Chronicles-ebook/dp/B07B8CF53R
+link: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987949/Snagglepuss_zkfnlh.jpg
 artist: Richard Pace
 quote: Library Journal starred review
 order: 5

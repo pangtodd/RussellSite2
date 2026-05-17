@@ -1,6 +1,6 @@
 ---
 title: Deadbox
-image: /assets/images/Deadbox.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987934/Deadbox_todt6u.webp
 link: https://www.amazon.com/Deadbox-Complete-Mark-Russell/dp/1638491127/
 artist: Benjamin Tiesma and Piotr Kowalski
 quote: comicon.com

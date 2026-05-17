@@ -1,6 +1,6 @@
 ---
 title: My Bad
-image: /assets/images/MyBad1.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987941/MyBad1_crdgpt.webp
 link: https://www.amazon.com/My-Bad-Mark-Russell/dp/1952090180
 artist: Peter Krause
 quote: Comic Watch

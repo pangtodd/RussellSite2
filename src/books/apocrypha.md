@@ -1,6 +1,6 @@
 ---
 title: Apocrypha Now
-image: /assets/images/apocrypha-now-cover-photo_lg.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778989221/apocrypha-now-cover-photo_lg_jm9dcc.jpg
 link: https://www.amazon.com/Apocrypha-Now-Mark-Russell/dp/1603093699
 artist: Shannon Wheeler
 quote: Daily Kos

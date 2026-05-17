@@ -1,6 +1,6 @@
 ---
 title: God is Disappointed In You
-image: /assets/images/GodIsDisappointed.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987936/GodIsDisappointed_ajeqjb.jpg
 link: https://www.amazon.com/God-Disappointed-You-Mark-Russell/dp/1603090983/
 artist: Shannon Wheeler
 quote: The New York Times

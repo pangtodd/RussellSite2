@@ -1,6 +1,6 @@
 ---
 title: Red Sonja
-image: /assets/images/redSonja.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987946/RedSonja_gv8q9b.jpg
 link: https://www.amazon.com/Red-Sonja-1-Scorched-Earth/dp/1524112763
 artist: Mirko Colak
 order: 10

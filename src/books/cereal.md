@@ -1,6 +1,6 @@
 ---
 title: Cereal
-image: /assets/images/cereal.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987934/Cereal_xgegag.jpg
 link: https://www.amazon.com/Cereal-Mark-Russell/dp/195209027X/
 artist: Peter Snejbjerg 
 quote: comicon.com

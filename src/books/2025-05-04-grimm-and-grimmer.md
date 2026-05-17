@@ -1,7 +1,7 @@
 ---
 title: Grimm and Grimmer
 artist: " Alicja Kocurek"
-image: /assets/uploads/grimm.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778988974/grimm_m8oprv.webp
 link: https://www.amazon.com/Grimm-Grimmer-Classic-Fairy-Rebooted/dp/0762487852
 order: 1
 quote: Shepherd Express

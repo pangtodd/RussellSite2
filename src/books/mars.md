@@ -1,6 +1,6 @@
 ---
 title: Traveling to Mars
-image: /assets/images/Mars.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987940/Mars_afcxhe.jpg
 link: https://www.amazon.com/dp/B0BCGY6F58
 artist: Roberto Meli
 quote: ScreenRant

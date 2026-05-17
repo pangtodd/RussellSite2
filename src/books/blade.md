@@ -1,6 +1,6 @@
 ---
 title: Blade:Vampire Nation
-image: /assets/images/bladeCover.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778989329/bladeCover_xx34m6.webp
 link: https://www.amazon.com/Blade-Vampire-Nation-Mark-Russell/dp/B0BMQSJTXM/
 artist: Dave Wachter and Mico Suayan
 order: 7

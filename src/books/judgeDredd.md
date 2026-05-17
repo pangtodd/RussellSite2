@@ -1,6 +1,6 @@
 ---
 title: Judge Dredd:Under Siege
-image: /assets/images/judgedredd01.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987938/judgedredd01_orc8ze.jpg
 link: https://www.amazon.com/JUDGE-DREDD-UNDER-SIEGE-TP/dp/1684053978
 artist: Max Dunbar
 quote: The Oregonian

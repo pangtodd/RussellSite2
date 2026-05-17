@@ -1,6 +1,6 @@
 ---
 title: Second Coming
-image: /assets/images/SecondComing.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987948/SecondComing_mgjh9u.jpg
 link: https://www.amazon.com/dp/B09M622SWH
 artist: Richard Pace
 quote: The Hollywood Reporter

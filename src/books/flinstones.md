@@ -1,6 +1,6 @@
 ---
 title: Flintstones
-image: /assets/images/Flinstones6.webp
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987936/Flinstones6_z49rfs.jpg
 link: https://www.amazon.com/Flintstones-Deluxe-Mark-Russell/dp/1779514972/
 artist: Stephen Pugh
 quote: GQ Magazine
