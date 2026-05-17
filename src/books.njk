@@ -23,27 +23,24 @@ layout: base.njk
       <div class="col-lg-3 mt-3">
         <div class="card">
           <div class="image">
-          {% if "https://res.cloudinary.com" in book.data.image %}
+            {% if "https://res.cloudinary.com" in book.data.image %}
             <img 
-              src="https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_400/{{ book.data.image }}"
+              src="{{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }}"
               srcset="
-                https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_400/{{ book.data.image }} 400w,
-                https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_600/{{ book.data.image }} 600w,
-                https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto,f_auto,w_800/{{ book.data.image }} 800w
+                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }} 400w,
+                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_600/') }} 600w,
+                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_800/') }} 800w
               "
               sizes="(max-width: 767px) 100vw, 25vw"
               class="card-img-top" 
               alt="cover of {{ book.data.title }}"
-              width="200"
-              height="300"
             >
-            {% else %}
+          {% else %}
+            <!-- OLD LOCAL CODE (Fallback for assets still on your hard drive) -->
             <img
               class="card-img-top"
               src="{{ book.data.image }}"
               alt="cover of {{ book.data.title }}"
-              width="200"
-              height="300"
             >
           {% endif %}
           </div>

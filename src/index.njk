@@ -175,7 +175,6 @@ layout: base.njk
         <div class="card">
           <div class="image">
             {% if "https://res.cloudinary.com" in book.data.image %}
-            <!-- NEW CLOUDINARY CODE (For migrated images) -->
             <img 
               src="{{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }}"
               srcset="
@@ -186,8 +185,6 @@ layout: base.njk
               sizes="(max-width: 767px) 100vw, 25vw"
               class="card-img-top" 
               alt="cover of {{ book.data.title }}"
-              width="200"
-              height="300"
             >
           {% else %}
             <!-- OLD LOCAL CODE (Fallback for assets still on your hard drive) -->
@@ -195,8 +192,6 @@ layout: base.njk
               class="card-img-top"
               src="{{ book.data.image }}"
               alt="cover of {{ book.data.title }}"
-              width="200"
-              height="300"
             >
           {% endif %}
           </div>
