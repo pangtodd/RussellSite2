@@ -74,12 +74,31 @@ layout: base.njk
         />
       </picture>
       <div class="carousel-caption">
-        <p class= "fs-5">Traveling to Mars</p>
-        <p>art by Roberto Meli</p>
+        <p class= "fs-5"></p>
+        <p></p>
       </div>
     </div>
     <div class="carousel-item active">
+
       <picture>
+      <source
+        media="(max-width: 596px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_600,f_auto,q_auto//v1778987942/Not-All-Robots-1_kt4fel.jpg"
+      />
+      <source
+        media="(min-width: 800px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987942/Not-All-Robots-1_kt4fel.jpg"
+      />
+      <img
+        src="https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987942/Not-All-Robots-1_kt4fel.jpg"
+        class="d-block w-100"
+        alt="robot and woman serving dinner"
+        loading="eager" 
+        fetchpriority="high"
+      />
+    </picture>
+      
+      {#<picture>
         <source
           media="(max-width: 596px)"
           srcset="assets/images/Not-All-Robots-1-mobile.webp"
@@ -93,7 +112,7 @@ layout: base.njk
           class="d-block w-100"
           alt="robot and woman serving dinner"
         />
-      </picture>
+      </picture>#}
       <div class="carousel-caption">
         <p class= "fs-5">Not All Robots</p>
         <p>art by Mike Deodato Jr.</p>
@@ -231,7 +250,7 @@ layout: base.njk
   <div class="container mt-4 pt-4" style="text-align: center">
     <h2>Coming Soon: items for sale</h2>
     <img
-      src="assets/images/crap.webp"
+      src="https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987934/crap_hjy5hn.jpg"
       class="rounded mx-auto d-block"
       alt="Flinstones panel of guy talking about loving his 'crap'"
     />
