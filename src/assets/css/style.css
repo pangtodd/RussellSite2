@@ -366,7 +366,23 @@ html *{
   text-decoration: none;
 }
 
+@media(max-width: 596px){
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.51;
+}
+}
 
+@media(min-width: 597px){
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 2 / 1;
+}
+}
 
 /* collapse stuff */
 

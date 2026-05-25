@@ -37,20 +37,21 @@ layout: base.njk
 
   <div class="carousel-inner">
     <div class="carousel-item">
+        
       <picture>
-        <source
-          media="(max-width: 596px)"
-          srcset="assets/images/SuperSpaceAgeMobile.webp"
-        />
-        <source
-          media="(min-width: 800px)"
-          srcset="assets/images/SuperSpaceAge.webp"
-        />
-        <img
-          src="assets/images/SuperSpaceAge.webp"
-          class="d-block w-100"
-          alt="Superman in the fortress of solitude"
-        />
+      <source
+        media="(max-width: 596px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987949/SuperSpaceAgeMobile_vprciv.jpg"
+      />
+      <source
+        media="(min-width: 800px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987949/SuperSpaceAge_vwbj4v.jpg"
+      />
+      <img
+        src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987949/SuperSpaceAge_vwbj4v.jpg"
+        class="d-block w-100"
+        alt="Superman in the fortress of solitude"
+      />
       </picture>
       <div class="carousel-caption">
         <p class= "fs-5">Superman Space Age</p>
@@ -59,6 +60,22 @@ layout: base.njk
     </div>
     <div class="carousel-item">
       <picture>
+      <source
+        media="(max-width: 596px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel-mobile_pdsyzt.jpg"
+      />
+      <source
+        media="(min-width: 800px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel_bt5mvy.jpg"
+      />
+      <img
+        src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel_bt5mvy.jpg"
+        class="d-block w-100"
+        alt="astronaut viewing earth news"
+      />
+      </picture>
+      
+      {#<picture>
         <source
           media="(max-width: 596px)"
           srcset="assets/images/Traveling_to_Mars-panel-mobile.webp"
@@ -72,7 +89,7 @@ layout: base.njk
           class="d-block w-100"
           alt="astronaut viewing earth news"
         />
-      </picture>
+      </picture>#}
       <div class="carousel-caption">
         <p class= "fs-5"></p>
         <p></p>
@@ -83,20 +100,20 @@ layout: base.njk
       <picture>
       <source
         media="(max-width: 596px)"
-        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_600,f_auto,q_auto//v1778987942/Not-All-Robots-1_kt4fel.jpg"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_600,f_auto,q_auto/v1778987941/Not-All-Robots-1-mobile_nkewsc.jpg"
       />
       <source
         media="(min-width: 800px)"
         srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987942/Not-All-Robots-1_kt4fel.jpg"
       />
       <img
-        src="https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987942/Not-All-Robots-1_kt4fel.jpg"
+        src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987942/Not-All-Robots-1_kt4fel.jpg"
         class="d-block w-100"
         alt="robot and woman serving dinner"
         loading="eager" 
         fetchpriority="high"
       />
-    </picture>
+      </picture>
       
       {#<picture>
         <source
@@ -119,21 +136,20 @@ layout: base.njk
       </div>
     </div>
     <div class="carousel-item">
-      <picture>
-        <source
-          media="(max-width: 596px)"
-          srcset="assets/images/oneStarSquadCropped.webp"
-        />
-        <source
-          media="(min-width: 800px)"
-          srcset="assets/images/oneStarSquad.webp"
-        />
-        <img
-          src="assets/images/oneStarSquadCropped.webp"
-          class="d-block w-100"
-          alt="One Star Squad trying to catch money raining from the sky"
-        />
-      </picture>
+            <picture>
+      <source
+        media="(max-width: 596px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_600,f_auto,q_auto/v1778987944/oneStarSquadCropped_ileobv.jpg"
+      />
+      <source
+        media="(min-width: 800px)"
+        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987944/oneStarSquad_d6jpdg.jpg"/>
+      <img
+        src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987944/oneStarSquad_d6jpdg.jpg"
+        class="d-block w-100"
+        alt="One Star Squad trying to catch money raining from the sky"
+      />
+    </picture>
       <div class="carousel-caption">
         <p class= "fs-5">One Star Squadron</p>
         <p>art by Steve Lieber</p>
@@ -143,10 +159,12 @@ layout: base.njk
   <button
     class="carousel-control-prev"
     type="button"
+    data-bs-target="#carouselControls"
     data-bs-slide="prev"
   >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
+  </button>
   <button
     class="carousel-control-next"
     type="button"

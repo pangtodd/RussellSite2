@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');*/
 
 html *{
   font-family: Poppins !important;
@@ -29,11 +29,28 @@ html *{
 #appearances1,
 #appearances2,
 #books,
-
 #contact {
   margin-top: 4rem;
-  padding-top: 4rem;
 }
+
+.booksHero{
+  max-height: 400px;
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+}
+
+.comingSoonImg{
+  padding-bottom: 2rem;
+  max-width: 50%;
+  margin: auto;
+}
+
+.comingSoon-text {
+  font-size: 1.5rem;
+}
+
+
 
 .card-body {
   display: grid;
@@ -74,7 +91,13 @@ html *{
 #footer {
   text-align: center;
   background-color: black;
-  color: white
+  color: white;
+  margin-top: 4rem;
+}
+
+.footerContent{
+  display: flex;
+  padding-top: 2rem;
 }
 
 /* <- card stuff-> */
@@ -102,6 +125,13 @@ html *{
   opacity: .5;
   transform: translateX(30%);
 }
+
+#books .card .image .card-img-top {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit : cover;
+}
+
 .card .details {
   position: absolute;
   top: 0;
@@ -124,7 +154,7 @@ html *{
   top: 50%;
   transform: translateY(-50%);
 }
-.card .details .center h1 {
+.card .details .center h3 {
   margin: 0;
   padding: 0;
   color: #ff3636;
@@ -161,8 +191,197 @@ html *{
   text-align: center;
   transform: .5s;
 }
+
+.press.row{
+  margin-bottom: 1rem;
+}
+
+.press {
+  box-sizing: border-box;
+}
+
+.press.card-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  display: block;
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+
+.press.card {
+  justify-content: center;
+  max-width:540px;
+}
 .card .details .center ul li a:hover {
   background: #ff3636;
+}
+
+.blog-title{
+  border-bottom: solid 4px;
+  margin-bottom: 4rem;
+}
+
+.comingSoon-headline, .blog-headline{
+  margin-bottom: 2rem;
+}
+
+.blogCard {
+  width: auto; 
+  height: 450px; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  overflow: word-wrap
+}
+
+.small-blog-card {
+  margin-bottom: 2rem;
+}
+
+.small-blog-card .card-body{
+  max-height: 254px;
+}
+
+.blog-card-img-top{
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 2rem;
+}
+
+.pressLogo{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100px;     
+  object-fit: contain;   
+  margin: 0 auto;
+  content-visibility: auto;
+  contain-intrinsic-size: 118px 100px;
+}
+
+@media screen and (max-width: 766px){
+  .blog-card-img-top{
+    width: 100%;
+    height: auto;
+  }
+  .pressLogo{
+    width: auto;
+    max-width: 150px;
+    max-height: 60px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 992px){
+  .blogCard{ margin: auto}
+  #navbarSupportedContent .nav-link{background-color: black; padding-left:10px!important; width:40%; opacity: 85%;}
+}
+
+.blogCard .card-img-top{
+  height: 200px; 
+  object-fit: cover; 
+  width: 100%;
+}
+
+.blogCard .card-body{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow:hidden;
+}
+
+.blogCard.card .card-body {
+  /* Set up the grid container */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
+
+.blogCard.card .card-body .card-title {
+  /* Title in the first row */
+  grid-row: 1;
+}
+
+.blogCard.card .card-body .card-text {
+  /* Text in the second row with vertical centering */
+  grid-row: 2;
+  align-self: center;
+}
+
+.blogCard.card .card-body .btn {
+  margin-top: auto;
+}
+
+.blogCard.card {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid green
+}
+
+.blogCard.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.share {
+  text-align: center;
+}
+
+.share a {
+  display: inline-block;
+  margin: 0 8px; 
+  text-decoration: none; 
+  vertical-align: middle; 
+}
+
+.share a svg {
+  height: 24px; 
+  width: auto;
+  display: block;
+  margin: 0 auto; 
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+@media(max-width: 596px){
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.51;
+}
+}
+
+@media(min-width: 597px){
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 2 / 1;
+}
 }
 
 /* collapse stuff */

@@ -10,7 +10,6 @@ media_library:
     cloud_name: dfbfqlfkc
     api_key: 687519444541486
 
-
 collections:
   - name: "press"
     label: "Press"
