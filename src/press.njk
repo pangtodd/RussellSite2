@@ -4,9 +4,31 @@ image: https://stirring-beignet-ce08d6.netlify.app/images/flickCroppy.webp
 description: Collection of press/articles discussing Mark Russell's work.
 layout: base.njk
 --- 
+
+
 <div class="hero">
-    <img src="/assets/images/dailyPlanet.webp" class="d-block w-100 booksHero" alt="Hero Image">
+  <picture>
+    <source 
+      media="(min-width: 768px)" 
+      srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_fill,g_auto,w_1400,h_400,q_auto,f_auto/v1778988974/dailyPlanet_1_axvhun"
+      width="1400"
+      height="400"
+    >
+    
+    <img 
+      src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_fill,g_auto,w_450,h_190,q_auto,f_auto/v1778988974/dailyPlanet_1_axvhun" 
+      class="d-block w-100 booksHero" 
+      alt="Hero Image"
+      width="450"
+      height="190"
+      loading="eager"
+      fetchpriority="high"
+    >
+  </picture>
 </div>
+
+
+
 <div class="container mt-3">
 
 <section id="Press">
