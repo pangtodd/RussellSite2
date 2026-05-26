@@ -10,6 +10,25 @@ html *{
   text-decoration: none;
 }
 
+@media (max-width: 799px) {
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.51;
+  }
+}
+
+/* Laptops & Desktops (Widescreen): Switches to the cinematic layout */
+@media (min-width: 800px) {
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 2 / 1;
+  }
+}
+
 .cardLink {
   text-decoration: none;
 }
