@@ -34,23 +34,21 @@ layout: base.njk
       aria-label="Slide 4"
     ></button>
   </div>
-
   <div class="carousel-inner">
     <div class="carousel-item">
       <picture>
-        <source
-          media="(max-width: 596px)"
-          srcset="assets/images/SuperSpaceAgeMobile.webp"
-        />
-        <source
-          media="(min-width: 800px)"
-          srcset="assets/images/SuperSpaceAge.webp"
-        />
-        <img
-          src="assets/images/SuperSpaceAge.webp"
-          class="d-block w-100"
-          alt="Superman in the fortress of solitude"
-        />
+        <source media="(max-width: 799px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_412,f_auto,q_auto/v1778987949/SuperSpaceAgeMobile_vprciv.jpg 1x,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_824,f_auto,q_auto/v1778987949/SuperSpaceAgeMobile_vprciv.jpg 2x">
+
+        <source media="(min-width: 800px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987949/SuperSpaceAge_vwbj4v.jpg 1200w,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1600,f_auto,q_auto/v1778987949/SuperSpaceAge_vwbj4v.jpg 1600w"
+          sizes="(min-width: 800px) 100vw">
+
+        <img src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1564,f_auto,q_auto/v1778987949/SuperSpaceAge_vwbj4v.jpg" 
+          class="d-block w-100" 
+          alt="Superman in the fortress of solitude">
       </picture>
       <div class="carousel-caption">
         <p class= "fs-5">Superman Space Age</p>
@@ -59,80 +57,57 @@ layout: base.njk
     </div>
     <div class="carousel-item">
       <picture>
-        <source
-          media="(max-width: 596px)"
-          srcset="assets/images/Traveling_to_Mars-panel-mobile.webp"
-        />
-        <source
-          media="(min-width: 800px)"
-          srcset="assets/images/Traveling_to_Mars-panel.webp"
-        />
-        <img
-          src="assets/images/Traveling_to_Mars-panel.webp"
-          class="d-block w-100"
-          alt="astronaut viewing earth news"
-        />
+        <source media="(max-width: 799px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_412,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel-mobile_pdsyzt.jpg 1x,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_824,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel-mobile_pdsyzt.jpg 2x">
+
+        <source media="(min-width: 800px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel_bt5mvy.jpg 1200w,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1600,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel_bt5mvy.jpg 1600w"
+          sizes="(min-width: 800px) 100vw">
+
+        <img src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1564,f_auto,q_auto/v1778987951/Traveling_to_Mars-panel_bt5mvy.jpg" 
+          class="d-block w-100" 
+          alt="One Star Squad trying to catch money raining from the sky">
       </picture>
       <div class="carousel-caption">
-        <p class= "fs-5"></p>
-        <p></p>
+        <p class= "fs-5">Traveling To Mars</p>
+        <p>art by Roberto Meli</p>
       </div>
     </div>
     <div class="carousel-item active">
-
       <picture>
-      <source
-        media="(max-width: 596px)"
-        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_600,f_auto,q_auto//v1778987942/Not-All-Robots-1_kt4fel.jpg"
-      />
-      <source
-        media="(min-width: 800px)"
-        srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987942/Not-All-Robots-1_kt4fel.jpg"
-      />
-      <img
-        src="https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987942/Not-All-Robots-1_kt4fel.jpg"
-        class="d-block w-100"
-        alt="robot and woman serving dinner"
-        loading="eager" 
-        fetchpriority="high"
-      />
-    </picture>
-      
-      {#<picture>
-        <source
-          media="(max-width: 596px)"
-          srcset="assets/images/Not-All-Robots-1-mobile.webp"
-        />
-        <source
-          media="(min-width: 800px)"
-          srcset="assets/images/Not-All-Robots-1.webp"
-        />
-        <img
-          src="assets/images/Not-All-Robots-1-mobile.webp"
-          class="d-block w-100"
-          alt="robot and woman serving dinner"
-        />
-      </picture>#}
+        <source media="(max-width: 799px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_412,f_auto,q_auto/v1778987942/Not-All-Robots-1-mobile_nkewsc.jpg 1x,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_824,f_auto,q_auto/v1778987942/Not-All-Robots-1-mobile_nkewsc.jpg 2x">
+        <source media="(min-width: 800px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987942/Not-All-Robots-1_kt4fel.jpg 1200w,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1600,f_auto,q_auto/v1778987942/Not-All-Robots-1_kt4fel.jpg 1600w"
+          sizes="(min-width: 800px) 100vw">
+        <img src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1564,f_auto,q_auto/v1778987942/Not-All-Robots-1_kt4fel.jpg" 
+          class="d-block w-100" 
+          alt="robot and woman serving dinner" 
+          loading="eager" 
+          fetchpriority="high">
+      </picture>
       <div class="carousel-caption">
-        <p class= "fs-5">Not All Robots</p>
+        <p class="fs-5">Not All Robots</p>
         <p>art by Mike Deodato Jr.</p>
       </div>
     </div>
     <div class="carousel-item">
       <picture>
-        <source
-          media="(max-width: 596px)"
-          srcset="assets/images/oneStarSquadCropped.webp"
-        />
-        <source
-          media="(min-width: 800px)"
-          srcset="assets/images/oneStarSquad.webp"
-        />
-        <img
-          src="assets/images/oneStarSquadCropped.webp"
-          class="d-block w-100"
-          alt="One Star Squad trying to catch money raining from the sky"
-        />
+        <source media="(max-width: 799px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_412,f_auto,q_auto/v1778987944/oneStarSquadCropped_ileobv.jpg 1x,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_824,f_auto,q_auto/v1778987944/oneStarSquadCropped_ileobv.jpg2x">
+        <source media="(min-width: 800px)" 
+          srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1200,f_auto,q_auto/v1778987944/oneStarSquad_d6jpdg.jpg 1200w,
+                  https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1600,f_auto,q_auto/v1778987944/oneStarSquad_d6jpdg.jpg 1600w"
+          sizes="(min-width: 800px) 100vw">
+
+        <img src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_scale,w_1564,f_auto,q_auto/v1778987944/oneStarSquad_d6jpdg.jpg " 
+          class="d-block w-100" 
+          alt="One Star Squad trying to catch money raining from the sky">
       </picture>
       <div class="carousel-caption">
         <p class= "fs-5">One Star Squadron</p>
@@ -143,6 +118,7 @@ layout: base.njk
   <button
     class="carousel-control-prev"
     type="button"
+    data-bs-target="#carouselControls"
     data-bs-slide="prev"
   >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
