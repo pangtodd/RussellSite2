@@ -135,23 +135,32 @@ layout: base.njk
 </div>
 
 <h1 class="text-center" style="margin-top: 4rem">Mark Russell. Comic book author. Book book author.</h1>
-
 {% if collections.featuredPost.length > 0 %}
   {% set featuredPost = collections.featuredPost[0] %}
 <section id="comingSoon">
-  <div class="container mt-4 pt-4" style="text-align: center">
-      <h2 class="fs-1 text-center comingSoon-headline">Upcoming projects and appearances</h1>
-      <h3>{{ featuredPost.data.title }}</h3>
-      <h4> {{ featuredPost.data.description }}</h4>
+  <div class="container mt-5 pt-4 d-flex flex-column align-items-center text-center">
+      
+      <h2 class="fs-1 comingSoon-headline mb-3">Upcoming projects and appearances</h2>
+      <h3 class="fs-2 mb-4">{{ featuredPost.data.title }}</h3>
+      
+      {% if featuredPost.data.description %}
+        <p class="lead mb-4">{{ featuredPost.data.description }}</p>
+      {% endif %}
+
       <img
-        src="{{ featuredPost.data.image}}"
-        class="comingSoonImg"
+        src="{{ featuredPost.data.image | replace('/upload/', '/upload/c_scale,w_500,f_auto,q_auto/') }}"
+        srcset="{{ featuredPost.data.image | replace('/upload/', '/upload/c_scale,w_500,f_auto,q_auto/') }} 1x,
+                {{ featuredPost.data.image | replace('/upload/', '/upload/c_scale,w_1000,f_auto,q_auto/') }} 2x"
+        class="img-fluid comingSoonImg mb-4"
         alt="{{ featuredPost.data.imageAlt }}"
+        loading="lazy"
+        decoding="async"
       />
-        <br />
-        <span class="comingSoon-text">
-        {{ featuredPost.content|safe }}
-        </span>
+      
+      <div class="comingSoon-text fs-5 max-w-prose">
+        {{ featuredPost.content | safe }}
+      </div>
+
   </div>
 </section>
 {% endif %}
@@ -167,20 +176,20 @@ layout: base.njk
           <div class="row">
         {% endif %}
       <div class="col-lg-3 mt-3">
-        <div class="card">
+        <div class="card {% if loop.index > 6%} d-none d-md-block{% endif %}">
           <div class="image">
             {% if "https://res.cloudinary.com" in book.data.image %}
             <img 
-              src="{{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }}"
+              src="{{ book.data.image | replace('/upload/', '/upload/c_scale,w_300,f_auto,q_auto:good/') }}"
               srcset="
-                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }} 400w,
-                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_600/') }} 600w,
-                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_800/') }} 800w
+                {{ book.data.image | replace('/upload/', '/upload/c_scale,w_300,f_auto,q_auto:eco/') }} 300w,
+                {{ book.data.image | replace('/upload/', '/upload/c_scale,w_600,f_auto,q_auto:eco/') }} 600w
               "
-              sizes="(max-width: 767px) 100vw, 25vw"
+              sizes="(max-width: 767px) 100vw, 304px"
               class="card-img-top" 
               alt="cover of {{ book.data.title }}"
               loading="lazy"
+              decoding="async"
             >
           {% else %}
             <!-- OLD LOCAL CODE (Fallback for assets still on your hard drive) -->
@@ -230,6 +239,7 @@ layout: base.njk
       src="https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987934/crap_hjy5hn.jpg"
       class="rounded mx-auto d-block"
       alt="Flinstones panel of guy talking about loving his 'crap'"
+      loading="lazy"
     />
     <h3>
       <br />Check back soon for autographed books, one-of-kind collectables,
@@ -244,9 +254,10 @@ layout: base.njk
     <div class="row mt-4">
       <div class="col-lg-4">
         <img
-          src="assets/images/Mark Russell Headshot 1.webp"
+          src="https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto/f_auto/v1778987940/Mark_Russell_Headshot_1_myesg6.jpg"
           class="imageAboutPage"
           alt="headshot of Mark Russell"
+          loading="lazy"
         />
       </div>
       <div class="col-lg-8">
@@ -285,8 +296,8 @@ layout: base.njk
                 <div class="row g-0">
                   <div class="col-md-4 row align-items-center">
 
-                                        {% if "https://res.cloudinary.com" in pressPost.data.image %}
-                        {% if ".svg" in pressPost.data.image %}
+                    {% if "https://res.cloudinary.com" in pressPost.data.image %}
+                      {% if ".svg" in pressPost.data.image %}
                         <img
                             src="{{ pressPost.data.image }}"
                             class="pressLogo"
@@ -308,7 +319,7 @@ layout: base.njk
                             width="300"
                             height="150"
                         />
-                        {% endif %}
+                      {% endif %}
                     {% else %}
                         <img
                         src="{{ pressPost.data.image }}"
