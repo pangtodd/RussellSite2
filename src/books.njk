@@ -4,8 +4,26 @@ image: https://stirring-beignet-ce08d6.netlify.app/images/flickCroppy.webp
 description: complete bibliography of Mark Russell's published works.
 layout: base.njk
 --- 
+
 <div class="hero">
-    <img src="/assets/images/disappointed-cropped.jpg" class="d-block w-100 booksHero" alt="Hero Image">
+  <picture>
+    <source 
+      media="(min-width: 768px)" 
+      srcset="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_fill,g_auto,w_1400,h_400,q_auto,f_auto/v1778988974/disappointed-cropped_qgt48g"
+      width="1400"
+      height="400"
+    >
+    
+    <img 
+      src="https://res.cloudinary.com/dfbfqlfkc/image/upload/c_fill,g_auto,w_450,h_190,q_auto,f_auto/v1778988974/disappointed-cropped_qgt48g" 
+      class="d-block w-100 booksHero" 
+      alt="Hero Image"
+      width="450"
+      height="190"
+      loading="eager"
+      fetchpriority="high"
+    >
+  </picture>
 </div>
 <div class="container mt-3">
 
@@ -25,15 +43,21 @@ layout: base.njk
           <div class="image">
             {% if "https://res.cloudinary.com" in book.data.image %}
             <img 
-              src="{{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }}"
+              src="{{ book.data.image | replace('/upload/', '/upload/q_auto:eco,f_auto,w_300/') }}"
               srcset="
-                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_400/') }} 400w,
-                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_600/') }} 600w,
-                {{ book.data.image | replace('/upload/', '/upload/q_auto,f_auto,w_800/') }} 800w
+                {{ book.data.image | replace('/upload/', '/upload/q_auto:eco,f_auto,w_300/') }} 300w,
+                {{ book.data.image | replace('/upload/', '/upload/q_auto:eco,f_auto,w_450/') }} 450w,
+                {{ book.data.image | replace('/upload/', '/upload/q_auto:eco,f_auto,w_600/') }} 600w
               "
-              sizes="(max-width: 767px) 100vw, 25vw"
+              sizes="(max-width: 450px) 100vw, (max-width: 767px) 50vw, 300px"
               class="card-img-top" 
               alt="cover of {{ book.data.title }}"
+              {%if loop.index == 1%} 
+              loading="eager"
+              fetchpriority="high"
+              {% elif loop.index> 8 %}
+              loading="lazy"
+              {% endif %}
             >
           {% else %}
             <!-- OLD LOCAL CODE (Fallback for assets still on your hard drive) -->
