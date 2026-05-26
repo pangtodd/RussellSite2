@@ -1,6 +1,6 @@
 ---
 title: One Star Squadron
-image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987944/oneStarSquad_d6jpdg.jpg
+image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987944/OneStarCover_aga0uy.jpg
 link: https://www.amazon.com/One-Star-Squadron-Mark-Russell/dp/1779516355
 artist: Steve Lieber
 order: 10
