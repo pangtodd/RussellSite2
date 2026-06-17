@@ -8,4 +8,6 @@ link: https://www.kickstarter.com/projects/comicsahoy/the-forgotten-divine-by-ma
 ---
 Have you – or someone you know – been haunted by a recurring vision you just can’t shake? 
 
-Have you ever thought about joining a cult? And are you ready to be indoctrinated today? If so…. You’ve come to the right place. Welcome, friend, to THE FORGOTTEN DIVINE.
+Have you ever thought about joining a cult? And are you ready to be indoctrinated today? If so…. You’ve come to the right place. Welcome, friend, to THE FORGOTTEN DIVINE.\
+\
+[J﻿oin the ~~cult~~ Kickstarter](https://www.kickstarter.com/projects/comicsahoy/the-forgotten-divine-by-mark-russell-and-russ-braun?ref=a4wrec)
