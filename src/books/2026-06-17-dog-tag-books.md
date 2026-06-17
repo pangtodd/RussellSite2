@@ -4,7 +4,7 @@ date: 2026-06-16
 artist: PJ Holden
 image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1779773092/dogtag_ywczfj.jpg
 link: https://neonichiban.com/item/68217
-order: 2
+order: 1
 quote: Comic Book Clique
 permalink: false
 ---
