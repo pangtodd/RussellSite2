@@ -42,6 +42,7 @@ collections:
       - { label: "image alt text", name: "imageAlt", widget: "string", required: false}
       - { label: "Link", name: "link", widget: "string", required: false, help: "provide link if you want text/image linked to url"}   
       - { label: "Body", name: "body", widget: "markdown", required: false}
+      - { label: "permalink", name: "permalink", widget: "hidden", default: false}
       - { label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}, required: false}
 
 
