@@ -139,10 +139,11 @@ layout: base.njk
   {% set featuredPost = collections.featuredPost[0] %}
 <section id="comingSoon">
   <div class="container mt-5 pt-4 d-flex flex-column align-items-center text-center">
-      
       <h2 class="fs-1 comingSoon-headline mb-3">Upcoming projects and appearances</h2>
       <h3 class="fs-2 mb-4">{{ featuredPost.data.title }}</h3>
-      
+        {% if featuredPost.data.link %}
+        <a href="{{featuredPost.data.link }}">
+        {% endif %}
       {% if featuredPost.data.description %}
         <p class="lead mb-4">{{ featuredPost.data.description }}</p>
       {% endif %}
@@ -156,7 +157,9 @@ layout: base.njk
         loading="lazy"
         decoding="async"
       />
-      
+  {% if featuredPost.data.link %}
+    </a>
+  {% endif %}
       <div class="comingSoon-text fs-5 max-w-prose">
         {{ featuredPost.content | safe }}
       </div>
@@ -254,7 +257,7 @@ layout: base.njk
     <div class="row mt-4">
       <div class="col-lg-4">
         <img
-          src="https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto/f_auto/v1778987940/Mark_Russell_Headshot_1_myesg6.jpg"
+          src="https://res.cloudinary.com/dfbfqlfkc/image/upload/q_auto/f_auto/v1781675692/Mark_Russell_owawm8.jpg"
           class="imageAboutPage"
           alt="headshot of Mark Russell"
           loading="lazy"
