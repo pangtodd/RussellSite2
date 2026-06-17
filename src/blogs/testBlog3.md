@@ -11,6 +11,7 @@ image: "/assets/images/Lois Lane Danger.webp"
 imageAlt: "apple"
 draft: false 
 layout: post.njk
+permalink: false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem mauris, placerat a ipsum at, accumsan consequat velit. Vivamus vulputate dapibus vehicula. Cras nisl libero, imperdiet vel tincidunt et, luctus sed leo. Integer vitae enim mauris. Duis luctus mollis nibh blandit ornare. Curabitur ipsum ante, luctus ac sem et, consequat porttitor enim. Proin consequat viverra tincidunt. Morbi in ipsum diam. Aliquam eu ornare neque, convallis ornare turpis. Proin ullamcorper sit amet risus ac lobortis. Sed consectetur tellus vehicula fringilla eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus.
