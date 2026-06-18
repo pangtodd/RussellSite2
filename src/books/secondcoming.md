@@ -1,11 +1,11 @@
 ---
 title: Second Coming
+date: 2019-07-10
+artist: Richard Pace
 image: https://res.cloudinary.com/dfbfqlfkc/image/upload/v1778987948/SecondComing_mgjh9u.jpg
 link: https://www.amazon.com/dp/B09M622SWH
-artist: Richard Pace
+order: 2
 quote: The Hollywood Reporter
-order: 5
-date: 2019-07-10
 permalink: false
 ---
 
